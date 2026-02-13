@@ -1,0 +1,134 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "other": "확인"
+  },
+  "cancel": {
+    "id": "cancel",
+    "other": "취소"
+  },
+  "save": {
+    "id": "save",
+    "other": "저장"
+  },
+  "delete": {
+    "id": "delete",
+    "other": "삭제"
+  },
+  "edit": {
+    "id": "edit",
+    "other": "편집"
+  },
+  "submit": {
+    "id": "submit",
+    "other": "제출"
+  },
+  "reset": {
+    "id": "reset",
+    "other": "초기화"
+  },
+  "search": {
+    "id": "search",
+    "other": "검색"
+  },
+  "close": {
+    "id": "close",
+    "other": "닫기"
+  },
+  "back": {
+    "id": "back",
+    "other": "뒤로"
+  },
+  "next": {
+    "id": "next",
+    "other": "다음"
+  },
+  "prev": {
+    "id": "prev",
+    "other": "이전"
+  },
+  "yes": {
+    "id": "yes",
+    "other": "예"
+  },
+  "no": {
+    "id": "no",
+    "other": "아니오"
+  },
+  "success": {
+    "id": "success",
+    "other": "성공"
+  },
+  "failed": {
+    "id": "failed",
+    "other": "실패"
+  },
+  "error": {
+    "id": "error",
+    "other": "오류"
+  },
+  "warning": {
+    "id": "warning",
+    "other": "경고"
+  },
+  "info": {
+    "id": "info",
+    "other": "정보"
+  },
+  "loading": {
+    "id": "loading",
+    "other": "로딩 중..."
+  },
+  "required": {
+    "id": "required",
+    "other": "필수"
+  },
+  "optional": {
+    "id": "optional",
+    "other": "선택"
+  },
+  "invalid": {
+    "id": "invalid",
+    "other": "잘못됨"
+  },
+  "username": {
+    "id": "username",
+    "other": "사용자 이름"
+  },
+  "password": {
+    "id": "password",
+    "other": "비밀번호"
+  },
+  "email": {
+    "id": "email",
+    "other": "이메일"
+  },
+  "phone": {
+    "id": "phone",
+    "other": "전화번호"
+  },
+  "login": {
+    "id": "login",
+    "other": "로그인"
+  },
+  "logout": {
+    "id": "logout",
+    "other": "로그아웃"
+  },
+  "register": {
+    "id": "register",
+    "other": "가입"
+  },
+  "welcome": {
+    "id": "welcome",
+    "other": "환영합니다"
+  },
+  "greeting": {
+    "id": "greeting",
+    "other": "안녕하세요, {{.Name}}님!"
+  },
+  "items": {
+    "id": "items",
+    "other": "{{.Count}}개 항목"
+  }
+}

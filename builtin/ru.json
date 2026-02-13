@@ -1,0 +1,137 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "other": "ОК"
+  },
+  "cancel": {
+    "id": "cancel",
+    "other": "Отмена"
+  },
+  "save": {
+    "id": "save",
+    "other": "Сохранить"
+  },
+  "delete": {
+    "id": "delete",
+    "other": "Удалить"
+  },
+  "edit": {
+    "id": "edit",
+    "other": "Редактировать"
+  },
+  "submit": {
+    "id": "submit",
+    "other": "Отправить"
+  },
+  "reset": {
+    "id": "reset",
+    "other": "Сбросить"
+  },
+  "search": {
+    "id": "search",
+    "other": "Поиск"
+  },
+  "close": {
+    "id": "close",
+    "other": "Закрыть"
+  },
+  "back": {
+    "id": "back",
+    "other": "Назад"
+  },
+  "next": {
+    "id": "next",
+    "other": "Далее"
+  },
+  "prev": {
+    "id": "prev",
+    "other": "Назад"
+  },
+  "yes": {
+    "id": "yes",
+    "other": "Да"
+  },
+  "no": {
+    "id": "no",
+    "other": "Нет"
+  },
+  "success": {
+    "id": "success",
+    "other": "Успешно"
+  },
+  "failed": {
+    "id": "failed",
+    "other": "Ошибка"
+  },
+  "error": {
+    "id": "error",
+    "other": "Ошибка"
+  },
+  "warning": {
+    "id": "warning",
+    "other": "Предупреждение"
+  },
+  "info": {
+    "id": "info",
+    "other": "Информация"
+  },
+  "loading": {
+    "id": "loading",
+    "other": "Загрузка..."
+  },
+  "required": {
+    "id": "required",
+    "other": "Обязательно"
+  },
+  "optional": {
+    "id": "optional",
+    "other": "Необязательно"
+  },
+  "invalid": {
+    "id": "invalid",
+    "other": "Недействительно"
+  },
+  "username": {
+    "id": "username",
+    "other": "Имя пользователя"
+  },
+  "password": {
+    "id": "password",
+    "other": "Пароль"
+  },
+  "email": {
+    "id": "email",
+    "other": "Эл. почта"
+  },
+  "phone": {
+    "id": "phone",
+    "other": "Телефон"
+  },
+  "login": {
+    "id": "login",
+    "other": "Войти"
+  },
+  "logout": {
+    "id": "logout",
+    "other": "Выйти"
+  },
+  "register": {
+    "id": "register",
+    "other": "Регистрация"
+  },
+  "welcome": {
+    "id": "welcome",
+    "other": "Добро пожаловать"
+  },
+  "greeting": {
+    "id": "greeting",
+    "other": "Привет, {{.Name}}!"
+  },
+  "items": {
+    "id": "items",
+    "one": "{{.Count}} элемент",
+    "few": "{{.Count}} элемента",
+    "many": "{{.Count}} элементов",
+    "other": "{{.Count}} элементов"
+  }
+}

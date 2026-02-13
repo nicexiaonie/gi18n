@@ -1,0 +1,134 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "other": "確定"
+  },
+  "cancel": {
+    "id": "cancel",
+    "other": "取消"
+  },
+  "save": {
+    "id": "save",
+    "other": "儲存"
+  },
+  "delete": {
+    "id": "delete",
+    "other": "刪除"
+  },
+  "edit": {
+    "id": "edit",
+    "other": "編輯"
+  },
+  "submit": {
+    "id": "submit",
+    "other": "提交"
+  },
+  "reset": {
+    "id": "reset",
+    "other": "重置"
+  },
+  "search": {
+    "id": "search",
+    "other": "搜尋"
+  },
+  "close": {
+    "id": "close",
+    "other": "關閉"
+  },
+  "back": {
+    "id": "back",
+    "other": "返回"
+  },
+  "next": {
+    "id": "next",
+    "other": "下一步"
+  },
+  "prev": {
+    "id": "prev",
+    "other": "上一步"
+  },
+  "yes": {
+    "id": "yes",
+    "other": "是"
+  },
+  "no": {
+    "id": "no",
+    "other": "否"
+  },
+  "success": {
+    "id": "success",
+    "other": "操作成功"
+  },
+  "failed": {
+    "id": "failed",
+    "other": "操作失敗"
+  },
+  "error": {
+    "id": "error",
+    "other": "錯誤"
+  },
+  "warning": {
+    "id": "warning",
+    "other": "警告"
+  },
+  "info": {
+    "id": "info",
+    "other": "資訊"
+  },
+  "loading": {
+    "id": "loading",
+    "other": "載入中..."
+  },
+  "required": {
+    "id": "required",
+    "other": "必填"
+  },
+  "optional": {
+    "id": "optional",
+    "other": "可選"
+  },
+  "invalid": {
+    "id": "invalid",
+    "other": "格式錯誤"
+  },
+  "username": {
+    "id": "username",
+    "other": "使用者名稱"
+  },
+  "password": {
+    "id": "password",
+    "other": "密碼"
+  },
+  "email": {
+    "id": "email",
+    "other": "電子郵件"
+  },
+  "phone": {
+    "id": "phone",
+    "other": "手機號碼"
+  },
+  "login": {
+    "id": "login",
+    "other": "登入"
+  },
+  "logout": {
+    "id": "logout",
+    "other": "登出"
+  },
+  "register": {
+    "id": "register",
+    "other": "註冊"
+  },
+  "welcome": {
+    "id": "welcome",
+    "other": "歡迎"
+  },
+  "greeting": {
+    "id": "greeting",
+    "other": "你好，{{.Name}}！"
+  },
+  "items": {
+    "id": "items",
+    "other": "{{.Count}} 個項目"
+  }
+}

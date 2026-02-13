@@ -1,0 +1,134 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "other": "确定"
+  },
+  "cancel": {
+    "id": "cancel",
+    "other": "取消"
+  },
+  "save": {
+    "id": "save",
+    "other": "保存"
+  },
+  "delete": {
+    "id": "delete",
+    "other": "删除"
+  },
+  "edit": {
+    "id": "edit",
+    "other": "编辑"
+  },
+  "submit": {
+    "id": "submit",
+    "other": "提交"
+  },
+  "reset": {
+    "id": "reset",
+    "other": "重置"
+  },
+  "search": {
+    "id": "search",
+    "other": "搜索"
+  },
+  "close": {
+    "id": "close",
+    "other": "关闭"
+  },
+  "back": {
+    "id": "back",
+    "other": "返回"
+  },
+  "next": {
+    "id": "next",
+    "other": "下一步"
+  },
+  "prev": {
+    "id": "prev",
+    "other": "上一步"
+  },
+  "yes": {
+    "id": "yes",
+    "other": "是"
+  },
+  "no": {
+    "id": "no",
+    "other": "否"
+  },
+  "success": {
+    "id": "success",
+    "other": "操作成功"
+  },
+  "failed": {
+    "id": "failed",
+    "other": "操作失败"
+  },
+  "error": {
+    "id": "error",
+    "other": "错误"
+  },
+  "warning": {
+    "id": "warning",
+    "other": "警告"
+  },
+  "info": {
+    "id": "info",
+    "other": "信息"
+  },
+  "loading": {
+    "id": "loading",
+    "other": "加载中..."
+  },
+  "required": {
+    "id": "required",
+    "other": "必填"
+  },
+  "optional": {
+    "id": "optional",
+    "other": "可选"
+  },
+  "invalid": {
+    "id": "invalid",
+    "other": "格式错误"
+  },
+  "username": {
+    "id": "username",
+    "other": "用户名"
+  },
+  "password": {
+    "id": "password",
+    "other": "密码"
+  },
+  "email": {
+    "id": "email",
+    "other": "邮箱"
+  },
+  "phone": {
+    "id": "phone",
+    "other": "手机号"
+  },
+  "login": {
+    "id": "login",
+    "other": "登录"
+  },
+  "logout": {
+    "id": "logout",
+    "other": "退出登录"
+  },
+  "register": {
+    "id": "register",
+    "other": "注册"
+  },
+  "welcome": {
+    "id": "welcome",
+    "other": "欢迎"
+  },
+  "greeting": {
+    "id": "greeting",
+    "other": "你好，{{.Name}}！"
+  },
+  "items": {
+    "id": "items",
+    "other": "{{.Count}} 个项目"
+  }
+}

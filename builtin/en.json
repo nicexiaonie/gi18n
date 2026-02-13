@@ -1,0 +1,168 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "description": "确认操作",
+    "other": "OK"
+  },
+  "cancel": {
+    "id": "cancel",
+    "description": "取消操作",
+    "other": "Cancel"
+  },
+  "save": {
+    "id": "save",
+    "description": "保存",
+    "other": "Save"
+  },
+  "delete": {
+    "id": "delete",
+    "description": "删除",
+    "other": "Delete"
+  },
+  "edit": {
+    "id": "edit",
+    "description": "编辑",
+    "other": "Edit"
+  },
+  "submit": {
+    "id": "submit",
+    "description": "提交",
+    "other": "Submit"
+  },
+  "reset": {
+    "id": "reset",
+    "description": "重置",
+    "other": "Reset"
+  },
+  "search": {
+    "id": "search",
+    "description": "搜索",
+    "other": "Search"
+  },
+  "close": {
+    "id": "close",
+    "description": "关闭",
+    "other": "Close"
+  },
+  "back": {
+    "id": "back",
+    "description": "返回",
+    "other": "Back"
+  },
+  "next": {
+    "id": "next",
+    "description": "下一步",
+    "other": "Next"
+  },
+  "prev": {
+    "id": "prev",
+    "description": "上一步",
+    "other": "Previous"
+  },
+  "yes": {
+    "id": "yes",
+    "description": "是",
+    "other": "Yes"
+  },
+  "no": {
+    "id": "no",
+    "description": "否",
+    "other": "No"
+  },
+  "success": {
+    "id": "success",
+    "description": "操作成功",
+    "other": "Success"
+  },
+  "failed": {
+    "id": "failed",
+    "description": "操作失败",
+    "other": "Failed"
+  },
+  "error": {
+    "id": "error",
+    "description": "错误",
+    "other": "Error"
+  },
+  "warning": {
+    "id": "warning",
+    "description": "警告",
+    "other": "Warning"
+  },
+  "info": {
+    "id": "info",
+    "description": "信息",
+    "other": "Info"
+  },
+  "loading": {
+    "id": "loading",
+    "description": "加载中",
+    "other": "Loading..."
+  },
+  "required": {
+    "id": "required",
+    "description": "必填",
+    "other": "Required"
+  },
+  "optional": {
+    "id": "optional",
+    "description": "可选",
+    "other": "Optional"
+  },
+  "invalid": {
+    "id": "invalid",
+    "description": "格式错误",
+    "other": "Invalid"
+  },
+  "username": {
+    "id": "username",
+    "description": "用户名",
+    "other": "Username"
+  },
+  "password": {
+    "id": "password",
+    "description": "密码",
+    "other": "Password"
+  },
+  "email": {
+    "id": "email",
+    "description": "邮箱",
+    "other": "Email"
+  },
+  "phone": {
+    "id": "phone",
+    "description": "手机号",
+    "other": "Phone"
+  },
+  "login": {
+    "id": "login",
+    "description": "登录",
+    "other": "Login"
+  },
+  "logout": {
+    "id": "logout",
+    "description": "退出登录",
+    "other": "Logout"
+  },
+  "register": {
+    "id": "register",
+    "description": "注册",
+    "other": "Register"
+  },
+  "welcome": {
+    "id": "welcome",
+    "description": "欢迎",
+    "other": "Welcome"
+  },
+  "greeting": {
+    "id": "greeting",
+    "description": "问候语，带名字参数",
+    "other": "Hello, {{.Name}}!"
+  },
+  "items": {
+    "id": "items",
+    "description": "项目数量，复数形式",
+    "one": "{{.Count}} item",
+    "other": "{{.Count}} items"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "confirm": {
+    "id": "confirm",
+    "other": "確認"
+  },
+  "cancel": {
+    "id": "cancel",
+    "other": "キャンセル"
+  },
+  "save": {
+    "id": "save",
+    "other": "保存"
+  },
+  "delete": {
+    "id": "delete",
+    "other": "削除"
+  },
+  "edit": {
+    "id": "edit",
+    "other": "編集"
+  },
+  "submit": {
+    "id": "submit",
+    "other": "送信"
+  },
+  "reset": {
+    "id": "reset",
+    "other": "リセット"
+  },
+  "search": {
+    "id": "search",
+    "other": "検索"
+  },
+  "close": {
+    "id": "close",
+    "other": "閉じる"
+  },
+  "back": {
+    "id": "back",
+    "other": "戻る"
+  },
+  "next": {
+    "id": "next",
+    "other": "次へ"
+  },
+  "prev": {
+    "id": "prev",
+    "other": "前へ"
+  },
+  "yes": {
+    "id": "yes",
+    "other": "はい"
+  },
+  "no": {
+    "id": "no",
+    "other": "いいえ"
+  },
+  "success": {
+    "id": "success",
+    "other": "成功"
+  },
+  "failed": {
+    "id": "failed",
+    "other": "失敗"
+  },
+  "error": {
+    "id": "error",
+    "other": "エラー"
+  },
+  "warning": {
+    "id": "warning",
+    "other": "警告"
+  },
+  "info": {
+    "id": "info",
+    "other": "情報"
+  },
+  "loading": {
+    "id": "loading",
+    "other": "読み込み中..."
+  },
+  "required": {
+    "id": "required",
+    "other": "必須"
+  },
+  "optional": {
+    "id": "optional",
+    "other": "任意"
+  },
+  "invalid": {
+    "id": "invalid",
+    "other": "無効"
+  },
+  "username": {
+    "id": "username",
+    "other": "ユーザー名"
+  },
+  "password": {
+    "id": "password",
+    "other": "パスワード"
+  },
+  "email": {
+    "id": "email",
+    "other": "メールアドレス"
+  },
+  "phone": {
+    "id": "phone",
+    "other": "電話番号"
+  },
+  "login": {
+    "id": "login",
+    "other": "ログイン"
+  },
+  "logout": {
+    "id": "logout",
+    "other": "ログアウト"
+  },
+  "register": {
+    "id": "register",
+    "other": "登録"
+  },
+  "welcome": {
+    "id": "welcome",
+    "other": "ようこそ"
+  },
+  "greeting": {
+    "id": "greeting",
+    "other": "こんにちは、{{.Name}}さん！"
+  },
+  "items": {
+    "id": "items",
+    "other": "{{.Count}} 件"
+  }
+}
