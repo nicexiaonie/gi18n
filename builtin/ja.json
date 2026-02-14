@@ -130,5 +130,793 @@
   "items": {
     "id": "items",
     "other": "{{.Count}} 件"
+  },
+  "add": {
+    "id": "add",
+    "other": "追加"
+  },
+  "create": {
+    "id": "create",
+    "other": "作成"
+  },
+  "update": {
+    "id": "update",
+    "other": "更新"
+  },
+  "remove": {
+    "id": "remove",
+    "other": "削除"
+  },
+  "copy": {
+    "id": "copy",
+    "other": "コピー"
+  },
+  "paste": {
+    "id": "paste",
+    "other": "貼り付け"
+  },
+  "cut": {
+    "id": "cut",
+    "other": "切り取り"
+  },
+  "print": {
+    "id": "print",
+    "other": "印刷"
+  },
+  "download": {
+    "id": "download",
+    "other": "ダウンロード"
+  },
+  "upload": {
+    "id": "upload",
+    "other": "アップロード"
+  },
+  "export": {
+    "id": "export",
+    "other": "エクスポート"
+  },
+  "import": {
+    "id": "import",
+    "other": "インポート"
+  },
+  "refresh": {
+    "id": "refresh",
+    "other": "更新"
+  },
+  "reload": {
+    "id": "reload",
+    "other": "再読み込み"
+  },
+  "clear": {
+    "id": "clear",
+    "other": "クリア"
+  },
+  "apply": {
+    "id": "apply",
+    "other": "適用"
+  },
+  "view": {
+    "id": "view",
+    "other": "表示"
+  },
+  "details": {
+    "id": "details",
+    "other": "詳細"
+  },
+  "more": {
+    "id": "more",
+    "other": "もっと見る"
+  },
+  "less": {
+    "id": "less",
+    "other": "閉じる"
+  },
+  "show": {
+    "id": "show",
+    "other": "表示"
+  },
+  "hide": {
+    "id": "hide",
+    "other": "非表示"
+  },
+  "expand": {
+    "id": "expand",
+    "other": "展開"
+  },
+  "collapse": {
+    "id": "collapse",
+    "other": "折りたたむ"
+  },
+  "select": {
+    "id": "select",
+    "other": "選択"
+  },
+  "deselect": {
+    "id": "deselect",
+    "other": "選択解除"
+  },
+  "select_all": {
+    "id": "select_all",
+    "other": "すべて選択"
+  },
+  "deselect_all": {
+    "id": "deselect_all",
+    "other": "すべて選択解除"
+  },
+  "pending": {
+    "id": "pending",
+    "other": "保留中"
+  },
+  "processing": {
+    "id": "processing",
+    "other": "処理中"
+  },
+  "completed": {
+    "id": "completed",
+    "other": "完了"
+  },
+  "cancelled": {
+    "id": "cancelled",
+    "other": "キャンセル済み"
+  },
+  "expired": {
+    "id": "expired",
+    "other": "期限切れ"
+  },
+  "active": {
+    "id": "active",
+    "other": "アクティブ"
+  },
+  "inactive": {
+    "id": "inactive",
+    "other": "非アクティブ"
+  },
+  "enabled": {
+    "id": "enabled",
+    "other": "有効"
+  },
+  "disabled": {
+    "id": "disabled",
+    "other": "無効"
+  },
+  "online": {
+    "id": "online",
+    "other": "オンライン"
+  },
+  "offline": {
+    "id": "offline",
+    "other": "オフライン"
+  },
+  "available": {
+    "id": "available",
+    "other": "利用可能"
+  },
+  "unavailable": {
+    "id": "unavailable",
+    "other": "利用不可"
+  },
+  "required_field": {
+    "id": "required_field",
+    "other": "この項目は必須です"
+  },
+  "invalid_email": {
+    "id": "invalid_email",
+    "other": "メールアドレスの形式が正しくありません"
+  },
+  "invalid_phone": {
+    "id": "invalid_phone",
+    "other": "電話番号の形式が正しくありません"
+  },
+  "invalid_format": {
+    "id": "invalid_format",
+    "other": "形式が正しくありません"
+  },
+  "password_too_short": {
+    "id": "password_too_short",
+    "other": "パスワードが短すぎます"
+  },
+  "password_too_weak": {
+    "id": "password_too_weak",
+    "other": "パスワードが弱すぎます"
+  },
+  "passwords_not_match": {
+    "id": "passwords_not_match",
+    "other": "パスワードが一致しません"
+  },
+  "email_exists": {
+    "id": "email_exists",
+    "other": "このメールアドレスは既に使用されています"
+  },
+  "username_taken": {
+    "id": "username_taken",
+    "other": "このユーザー名は既に使用されています"
+  },
+  "min_length": {
+    "id": "min_length",
+    "other": "最小長は {{.Min}} です"
+  },
+  "max_length": {
+    "id": "max_length",
+    "other": "最大長は {{.Max}} です"
+  },
+  "total": {
+    "id": "total",
+    "other": "合計"
+  },
+  "all": {
+    "id": "all",
+    "other": "すべて"
+  },
+  "filter": {
+    "id": "filter",
+    "other": "フィルター"
+  },
+  "sort": {
+    "id": "sort",
+    "other": "並び替え"
+  },
+  "sort_by": {
+    "id": "sort_by",
+    "other": "並び順"
+  },
+  "order_by": {
+    "id": "order_by",
+    "other": "順序"
+  },
+  "ascending": {
+    "id": "ascending",
+    "other": "昇順"
+  },
+  "descending": {
+    "id": "descending",
+    "other": "降順"
+  },
+  "today": {
+    "id": "today",
+    "other": "今日"
+  },
+  "yesterday": {
+    "id": "yesterday",
+    "other": "昨日"
+  },
+  "tomorrow": {
+    "id": "tomorrow",
+    "other": "明日"
+  },
+  "now": {
+    "id": "now",
+    "other": "今"
+  },
+  "date": {
+    "id": "date",
+    "other": "日付"
+  },
+  "time": {
+    "id": "time",
+    "other": "時刻"
+  },
+  "datetime": {
+    "id": "datetime",
+    "other": "日時"
+  },
+  "created_at": {
+    "id": "created_at",
+    "other": "作成日時"
+  },
+  "updated_at": {
+    "id": "updated_at",
+    "other": "更新日時"
+  },
+  "deleted_at": {
+    "id": "deleted_at",
+    "other": "削除日時"
+  },
+  "start_date": {
+    "id": "start_date",
+    "other": "開始日"
+  },
+  "end_date": {
+    "id": "end_date",
+    "other": "終了日"
+  },
+  "duration": {
+    "id": "duration",
+    "other": "期間"
+  },
+  "file": {
+    "id": "file",
+    "other": "ファイル"
+  },
+  "folder": {
+    "id": "folder",
+    "other": "フォルダ"
+  },
+  "upload_file": {
+    "id": "upload_file",
+    "other": "ファイルをアップロード"
+  },
+  "select_file": {
+    "id": "select_file",
+    "other": "ファイルを選択"
+  },
+  "file_size": {
+    "id": "file_size",
+    "other": "ファイルサイズ"
+  },
+  "max_file_size": {
+    "id": "max_file_size",
+    "other": "最大ファイルサイズ"
+  },
+  "allowed_types": {
+    "id": "allowed_types",
+    "other": "許可されたタイプ"
+  },
+  "drag_drop": {
+    "id": "drag_drop",
+    "other": "ドラッグ&ドロップ"
+  },
+  "profile": {
+    "id": "profile",
+    "other": "プロフィール"
+  },
+  "settings": {
+    "id": "settings",
+    "other": "設定"
+  },
+  "preferences": {
+    "id": "preferences",
+    "other": "環境設定"
+  },
+  "account": {
+    "id": "account",
+    "other": "アカウント"
+  },
+  "change_password": {
+    "id": "change_password",
+    "other": "パスワード変更"
+  },
+  "forgot_password": {
+    "id": "forgot_password",
+    "other": "パスワードを忘れた"
+  },
+  "reset_password": {
+    "id": "reset_password",
+    "other": "パスワードリセット"
+  },
+  "remember_me": {
+    "id": "remember_me",
+    "other": "ログイン状態を保持"
+  },
+  "name": {
+    "id": "name",
+    "other": "名前"
+  },
+  "title": {
+    "id": "title",
+    "other": "タイトル"
+  },
+  "description": {
+    "id": "description",
+    "other": "説明"
+  },
+  "content": {
+    "id": "content",
+    "other": "内容"
+  },
+  "status": {
+    "id": "status",
+    "other": "ステータス"
+  },
+  "action": {
+    "id": "action",
+    "other": "操作"
+  },
+  "type": {
+    "id": "type",
+    "other": "タイプ"
+  },
+  "category": {
+    "id": "category",
+    "other": "カテゴリ"
+  },
+  "tag": {
+    "id": "tag",
+    "other": "タグ"
+  },
+  "comment": {
+    "id": "comment",
+    "other": "コメント"
+  },
+  "note": {
+    "id": "note",
+    "other": "メモ"
+  },
+  "message": {
+    "id": "message",
+    "other": "メッセージ"
+  },
+  "are_you_sure": {
+    "id": "are_you_sure",
+    "other": "よろしいですか？"
+  },
+  "confirm_delete": {
+    "id": "confirm_delete",
+    "other": "本当に削除しますか？"
+  },
+  "confirm_action": {
+    "id": "confirm_action",
+    "other": "本当に続行しますか？"
+  },
+  "operation_cancelled": {
+    "id": "operation_cancelled",
+    "other": "操作がキャンセルされました"
+  },
+  "no_data": {
+    "id": "no_data",
+    "other": "データなし"
+  },
+  "no_results": {
+    "id": "no_results",
+    "other": "結果が見つかりません"
+  },
+  "not_found": {
+    "id": "not_found",
+    "other": "見つかりません"
+  },
+  "page_not_found": {
+    "id": "page_not_found",
+    "other": "ページが見つかりません"
+  },
+  "access_denied": {
+    "id": "access_denied",
+    "other": "アクセスが拒否されました"
+  },
+  "permission_denied": {
+    "id": "permission_denied",
+    "other": "権限がありません"
+  },
+  "session_expired": {
+    "id": "session_expired",
+    "other": "セッションの有効期限が切れました"
+  },
+  "language": {
+    "id": "language",
+    "other": "言語"
+  },
+  "theme": {
+    "id": "theme",
+    "other": "テーマ"
+  },
+  "dark_mode": {
+    "id": "dark_mode",
+    "other": "ダークモード"
+  },
+  "light_mode": {
+    "id": "light_mode",
+    "other": "ライトモード"
+  },
+  "notification": {
+    "id": "notification",
+    "other": "通知"
+  },
+  "count": {
+    "id": "count",
+    "other": "数"
+  },
+  "total_count": {
+    "id": "total_count",
+    "other": "合計数"
+  },
+  "selected_count": {
+    "id": "selected_count",
+    "other": "選択数"
+  },
+  "new": {
+    "id": "new",
+    "other": "新規"
+  },
+  "latest": {
+    "id": "latest",
+    "other": "最新"
+  },
+  "popular": {
+    "id": "popular",
+    "other": "人気"
+  },
+  "featured": {
+    "id": "featured",
+    "other": "注目"
+  },
+  "recommended": {
+    "id": "recommended",
+    "other": "おすすめ"
+  },
+  "favorite": {
+    "id": "favorite",
+    "other": "お気に入り"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "other": "ブックマーク"
+  },
+  "share": {
+    "id": "share",
+    "other": "共有"
+  },
+  "copy_link": {
+    "id": "copy_link",
+    "other": "リンクをコピー"
+  },
+  "send": {
+    "id": "send",
+    "other": "送信"
+  },
+  "receive": {
+    "id": "receive",
+    "other": "受信"
+  },
+  "inbox": {
+    "id": "inbox",
+    "other": "受信トレイ"
+  },
+  "outbox": {
+    "id": "outbox",
+    "other": "送信トレイ"
+  },
+  "draft": {
+    "id": "draft",
+    "other": "下書き"
+  },
+  "trash": {
+    "id": "trash",
+    "other": "ゴミ箱"
+  },
+  "archive": {
+    "id": "archive",
+    "other": "アーカイブ"
+  },
+  "restore": {
+    "id": "restore",
+    "other": "復元"
+  },
+  "network_error": {
+    "id": "network_error",
+    "other": "ネットワークエラー"
+  },
+  "timeout": {
+    "id": "timeout",
+    "other": "タイムアウト"
+  },
+  "server_error": {
+    "id": "server_error",
+    "other": "サーバーエラー"
+  },
+  "bad_request": {
+    "id": "bad_request",
+    "other": "リクエストエラー"
+  },
+  "unauthorized": {
+    "id": "unauthorized",
+    "other": "認証されていません"
+  },
+  "forbidden": {
+    "id": "forbidden",
+    "other": "アクセス禁止"
+  },
+  "request_failed": {
+    "id": "request_failed",
+    "other": "リクエスト失敗"
+  },
+  "please_try_again": {
+    "id": "please_try_again",
+    "other": "もう一度お試しください"
+  },
+  "something_went_wrong": {
+    "id": "something_went_wrong",
+    "other": "エラーが発生しました"
+  },
+  "try_again_later": {
+    "id": "try_again_later",
+    "other": "後でもう一度お試しください"
+  },
+  "login_success": {
+    "id": "login_success",
+    "other": "ログイン成功"
+  },
+  "login_failed": {
+    "id": "login_failed",
+    "other": "ログイン失敗"
+  },
+  "logout_success": {
+    "id": "logout_success",
+    "other": "ログアウト成功"
+  },
+  "register_success": {
+    "id": "register_success",
+    "other": "登録成功"
+  },
+  "account_not_found": {
+    "id": "account_not_found",
+    "other": "アカウントが見つかりません"
+  },
+  "incorrect_password": {
+    "id": "incorrect_password",
+    "other": "パスワードが正しくありません"
+  },
+  "account_locked": {
+    "id": "account_locked",
+    "other": "アカウントがロックされています"
+  },
+  "account_disabled": {
+    "id": "account_disabled",
+    "other": "アカウントが無効です"
+  },
+  "verification_code": {
+    "id": "verification_code",
+    "other": "認証コード"
+  },
+  "send_code": {
+    "id": "send_code",
+    "other": "コードを送信"
+  },
+  "resend_code": {
+    "id": "resend_code",
+    "other": "再送信"
+  },
+  "verify": {
+    "id": "verify",
+    "other": "確認"
+  },
+  "code_expired": {
+    "id": "code_expired",
+    "other": "コードの有効期限が切れました"
+  },
+  "invalid_code": {
+    "id": "invalid_code",
+    "other": "コードが正しくありません"
+  },
+  "captcha": {
+    "id": "captcha",
+    "other": "認証コード"
+  },
+  "admin": {
+    "id": "admin",
+    "other": "管理者"
+  },
+  "user": {
+    "id": "user",
+    "other": "ユーザー"
+  },
+  "guest": {
+    "id": "guest",
+    "other": "ゲスト"
+  },
+  "role": {
+    "id": "role",
+    "other": "役割"
+  },
+  "permission": {
+    "id": "permission",
+    "other": "権限"
+  },
+  "saved_successfully": {
+    "id": "saved_successfully",
+    "other": "保存しました"
+  },
+  "deleted_successfully": {
+    "id": "deleted_successfully",
+    "other": "削除しました"
+  },
+  "updated_successfully": {
+    "id": "updated_successfully",
+    "other": "更新しました"
+  },
+  "created_successfully": {
+    "id": "created_successfully",
+    "other": "作成しました"
+  },
+  "operation_successful": {
+    "id": "operation_successful",
+    "other": "操作が成功しました"
+  },
+  "operation_failed": {
+    "id": "operation_failed",
+    "other": "操作が失敗しました"
+  },
+  "please_wait": {
+    "id": "please_wait",
+    "other": "お待ちください..."
+  },
+  "processing_request": {
+    "id": "processing_request",
+    "other": "処理中..."
+  },
+  "list": {
+    "id": "list",
+    "other": "リスト"
+  },
+  "grid": {
+    "id": "grid",
+    "other": "グリッド"
+  },
+  "table": {
+    "id": "table",
+    "other": "テーブル"
+  },
+  "card": {
+    "id": "card",
+    "other": "カード"
+  },
+  "continue": {
+    "id": "continue",
+    "other": "続ける"
+  },
+  "skip": {
+    "id": "skip",
+    "other": "スキップ"
+  },
+  "finish": {
+    "id": "finish",
+    "other": "完了"
+  },
+  "ok": {
+    "id": "ok",
+    "other": "OK"
+  },
+  "got_it": {
+    "id": "got_it",
+    "other": "了解"
+  },
+  "version": {
+    "id": "version",
+    "other": "バージョン"
+  },
+  "size": {
+    "id": "size",
+    "other": "サイズ"
+  },
+  "image": {
+    "id": "image",
+    "other": "画像"
+  },
+  "video": {
+    "id": "video",
+    "other": "動画"
+  },
+  "audio": {
+    "id": "audio",
+    "other": "音声"
+  },
+  "link": {
+    "id": "link",
+    "other": "リンク"
+  },
+  "url": {
+    "id": "url",
+    "other": "URL"
+  },
+  "batch_delete": {
+    "id": "batch_delete",
+    "other": "一括削除"
+  },
+  "batch_operation": {
+    "id": "batch_operation",
+    "other": "一括操作"
+  },
+  "draft_saved": {
+    "id": "draft_saved",
+    "other": "下書きを保存しました"
+  },
+  "auto_saved": {
+    "id": "auto_saved",
+    "other": "自動保存"
+  },
+  "syncing": {
+    "id": "syncing",
+    "other": "同期中..."
+  },
+  "synced": {
+    "id": "synced",
+    "other": "同期済み"
   }
 }

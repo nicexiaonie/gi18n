@@ -130,5 +130,793 @@
   "items": {
     "id": "items",
     "other": "{{.Count}} 個項目"
+  },
+  "add": {
+    "id": "add",
+    "other": "新增"
+  },
+  "create": {
+    "id": "create",
+    "other": "建立"
+  },
+  "update": {
+    "id": "update",
+    "other": "更新"
+  },
+  "remove": {
+    "id": "remove",
+    "other": "移除"
+  },
+  "copy": {
+    "id": "copy",
+    "other": "複製"
+  },
+  "paste": {
+    "id": "paste",
+    "other": "貼上"
+  },
+  "cut": {
+    "id": "cut",
+    "other": "剪下"
+  },
+  "print": {
+    "id": "print",
+    "other": "列印"
+  },
+  "download": {
+    "id": "download",
+    "other": "下載"
+  },
+  "upload": {
+    "id": "upload",
+    "other": "上傳"
+  },
+  "export": {
+    "id": "export",
+    "other": "匯出"
+  },
+  "import": {
+    "id": "import",
+    "other": "匯入"
+  },
+  "refresh": {
+    "id": "refresh",
+    "other": "重新整理"
+  },
+  "reload": {
+    "id": "reload",
+    "other": "重新載入"
+  },
+  "clear": {
+    "id": "clear",
+    "other": "清空"
+  },
+  "apply": {
+    "id": "apply",
+    "other": "套用"
+  },
+  "view": {
+    "id": "view",
+    "other": "檢視"
+  },
+  "details": {
+    "id": "details",
+    "other": "詳情"
+  },
+  "more": {
+    "id": "more",
+    "other": "更多"
+  },
+  "less": {
+    "id": "less",
+    "other": "收起"
+  },
+  "show": {
+    "id": "show",
+    "other": "顯示"
+  },
+  "hide": {
+    "id": "hide",
+    "other": "隱藏"
+  },
+  "expand": {
+    "id": "expand",
+    "other": "展開"
+  },
+  "collapse": {
+    "id": "collapse",
+    "other": "收合"
+  },
+  "select": {
+    "id": "select",
+    "other": "選擇"
+  },
+  "deselect": {
+    "id": "deselect",
+    "other": "取消選擇"
+  },
+  "select_all": {
+    "id": "select_all",
+    "other": "全選"
+  },
+  "deselect_all": {
+    "id": "deselect_all",
+    "other": "取消全選"
+  },
+  "pending": {
+    "id": "pending",
+    "other": "待處理"
+  },
+  "processing": {
+    "id": "processing",
+    "other": "處理中"
+  },
+  "completed": {
+    "id": "completed",
+    "other": "已完成"
+  },
+  "cancelled": {
+    "id": "cancelled",
+    "other": "已取消"
+  },
+  "expired": {
+    "id": "expired",
+    "other": "已過期"
+  },
+  "active": {
+    "id": "active",
+    "other": "活躍"
+  },
+  "inactive": {
+    "id": "inactive",
+    "other": "不活躍"
+  },
+  "enabled": {
+    "id": "enabled",
+    "other": "已啟用"
+  },
+  "disabled": {
+    "id": "disabled",
+    "other": "已停用"
+  },
+  "online": {
+    "id": "online",
+    "other": "線上"
+  },
+  "offline": {
+    "id": "offline",
+    "other": "離線"
+  },
+  "available": {
+    "id": "available",
+    "other": "可用"
+  },
+  "unavailable": {
+    "id": "unavailable",
+    "other": "不可用"
+  },
+  "required_field": {
+    "id": "required_field",
+    "other": "此欄位為必填"
+  },
+  "invalid_email": {
+    "id": "invalid_email",
+    "other": "電子郵件格式錯誤"
+  },
+  "invalid_phone": {
+    "id": "invalid_phone",
+    "other": "手機號碼格式錯誤"
+  },
+  "invalid_format": {
+    "id": "invalid_format",
+    "other": "格式錯誤"
+  },
+  "password_too_short": {
+    "id": "password_too_short",
+    "other": "密碼太短"
+  },
+  "password_too_weak": {
+    "id": "password_too_weak",
+    "other": "密碼強度太弱"
+  },
+  "passwords_not_match": {
+    "id": "passwords_not_match",
+    "other": "兩次輸入的密碼不一致"
+  },
+  "email_exists": {
+    "id": "email_exists",
+    "other": "該電子郵件已被使用"
+  },
+  "username_taken": {
+    "id": "username_taken",
+    "other": "該使用者名稱已被佔用"
+  },
+  "min_length": {
+    "id": "min_length",
+    "other": "最小長度為 {{.Min}}"
+  },
+  "max_length": {
+    "id": "max_length",
+    "other": "最大長度為 {{.Max}}"
+  },
+  "total": {
+    "id": "total",
+    "other": "總計"
+  },
+  "all": {
+    "id": "all",
+    "other": "全部"
+  },
+  "filter": {
+    "id": "filter",
+    "other": "篩選"
+  },
+  "sort": {
+    "id": "sort",
+    "other": "排序"
+  },
+  "sort_by": {
+    "id": "sort_by",
+    "other": "排序方式"
+  },
+  "order_by": {
+    "id": "order_by",
+    "other": "排序依據"
+  },
+  "ascending": {
+    "id": "ascending",
+    "other": "升序"
+  },
+  "descending": {
+    "id": "descending",
+    "other": "降序"
+  },
+  "today": {
+    "id": "today",
+    "other": "今天"
+  },
+  "yesterday": {
+    "id": "yesterday",
+    "other": "昨天"
+  },
+  "tomorrow": {
+    "id": "tomorrow",
+    "other": "明天"
+  },
+  "now": {
+    "id": "now",
+    "other": "現在"
+  },
+  "date": {
+    "id": "date",
+    "other": "日期"
+  },
+  "time": {
+    "id": "time",
+    "other": "時間"
+  },
+  "datetime": {
+    "id": "datetime",
+    "other": "日期時間"
+  },
+  "created_at": {
+    "id": "created_at",
+    "other": "建立時間"
+  },
+  "updated_at": {
+    "id": "updated_at",
+    "other": "更新時間"
+  },
+  "deleted_at": {
+    "id": "deleted_at",
+    "other": "刪除時間"
+  },
+  "start_date": {
+    "id": "start_date",
+    "other": "開始日期"
+  },
+  "end_date": {
+    "id": "end_date",
+    "other": "結束日期"
+  },
+  "duration": {
+    "id": "duration",
+    "other": "時長"
+  },
+  "file": {
+    "id": "file",
+    "other": "檔案"
+  },
+  "folder": {
+    "id": "folder",
+    "other": "資料夾"
+  },
+  "upload_file": {
+    "id": "upload_file",
+    "other": "上傳檔案"
+  },
+  "select_file": {
+    "id": "select_file",
+    "other": "選擇檔案"
+  },
+  "file_size": {
+    "id": "file_size",
+    "other": "檔案大小"
+  },
+  "max_file_size": {
+    "id": "max_file_size",
+    "other": "最大檔案大小"
+  },
+  "allowed_types": {
+    "id": "allowed_types",
+    "other": "允許的檔案類型"
+  },
+  "drag_drop": {
+    "id": "drag_drop",
+    "other": "拖曳上傳"
+  },
+  "profile": {
+    "id": "profile",
+    "other": "個人資料"
+  },
+  "settings": {
+    "id": "settings",
+    "other": "設定"
+  },
+  "preferences": {
+    "id": "preferences",
+    "other": "偏好設定"
+  },
+  "account": {
+    "id": "account",
+    "other": "帳戶"
+  },
+  "change_password": {
+    "id": "change_password",
+    "other": "修改密碼"
+  },
+  "forgot_password": {
+    "id": "forgot_password",
+    "other": "忘記密碼"
+  },
+  "reset_password": {
+    "id": "reset_password",
+    "other": "重設密碼"
+  },
+  "remember_me": {
+    "id": "remember_me",
+    "other": "記住我"
+  },
+  "name": {
+    "id": "name",
+    "other": "名稱"
+  },
+  "title": {
+    "id": "title",
+    "other": "標題"
+  },
+  "description": {
+    "id": "description",
+    "other": "描述"
+  },
+  "content": {
+    "id": "content",
+    "other": "內容"
+  },
+  "status": {
+    "id": "status",
+    "other": "狀態"
+  },
+  "action": {
+    "id": "action",
+    "other": "操作"
+  },
+  "type": {
+    "id": "type",
+    "other": "類型"
+  },
+  "category": {
+    "id": "category",
+    "other": "分類"
+  },
+  "tag": {
+    "id": "tag",
+    "other": "標籤"
+  },
+  "comment": {
+    "id": "comment",
+    "other": "留言"
+  },
+  "note": {
+    "id": "note",
+    "other": "備註"
+  },
+  "message": {
+    "id": "message",
+    "other": "訊息"
+  },
+  "are_you_sure": {
+    "id": "are_you_sure",
+    "other": "您確定嗎？"
+  },
+  "confirm_delete": {
+    "id": "confirm_delete",
+    "other": "您確定要刪除此項嗎？"
+  },
+  "confirm_action": {
+    "id": "confirm_action",
+    "other": "您確定要繼續操作嗎？"
+  },
+  "operation_cancelled": {
+    "id": "operation_cancelled",
+    "other": "操作已取消"
+  },
+  "no_data": {
+    "id": "no_data",
+    "other": "暫無資料"
+  },
+  "no_results": {
+    "id": "no_results",
+    "other": "未找到結果"
+  },
+  "not_found": {
+    "id": "not_found",
+    "other": "未找到"
+  },
+  "page_not_found": {
+    "id": "page_not_found",
+    "other": "頁面未找到"
+  },
+  "access_denied": {
+    "id": "access_denied",
+    "other": "存取被拒絕"
+  },
+  "permission_denied": {
+    "id": "permission_denied",
+    "other": "權限不足"
+  },
+  "session_expired": {
+    "id": "session_expired",
+    "other": "工作階段已過期"
+  },
+  "language": {
+    "id": "language",
+    "other": "語言"
+  },
+  "theme": {
+    "id": "theme",
+    "other": "主題"
+  },
+  "dark_mode": {
+    "id": "dark_mode",
+    "other": "深色模式"
+  },
+  "light_mode": {
+    "id": "light_mode",
+    "other": "明亮模式"
+  },
+  "notification": {
+    "id": "notification",
+    "other": "通知"
+  },
+  "count": {
+    "id": "count",
+    "other": "數量"
+  },
+  "total_count": {
+    "id": "total_count",
+    "other": "總數"
+  },
+  "selected_count": {
+    "id": "selected_count",
+    "other": "已選數量"
+  },
+  "new": {
+    "id": "new",
+    "other": "新建"
+  },
+  "latest": {
+    "id": "latest",
+    "other": "最新"
+  },
+  "popular": {
+    "id": "popular",
+    "other": "熱門"
+  },
+  "featured": {
+    "id": "featured",
+    "other": "精選"
+  },
+  "recommended": {
+    "id": "recommended",
+    "other": "推薦"
+  },
+  "favorite": {
+    "id": "favorite",
+    "other": "收藏"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "other": "書籤"
+  },
+  "share": {
+    "id": "share",
+    "other": "分享"
+  },
+  "copy_link": {
+    "id": "copy_link",
+    "other": "複製連結"
+  },
+  "send": {
+    "id": "send",
+    "other": "傳送"
+  },
+  "receive": {
+    "id": "receive",
+    "other": "接收"
+  },
+  "inbox": {
+    "id": "inbox",
+    "other": "收件匣"
+  },
+  "outbox": {
+    "id": "outbox",
+    "other": "寄件匣"
+  },
+  "draft": {
+    "id": "draft",
+    "other": "草稿"
+  },
+  "trash": {
+    "id": "trash",
+    "other": "資源回收筒"
+  },
+  "archive": {
+    "id": "archive",
+    "other": "封存"
+  },
+  "restore": {
+    "id": "restore",
+    "other": "還原"
+  },
+  "network_error": {
+    "id": "network_error",
+    "other": "網路錯誤"
+  },
+  "timeout": {
+    "id": "timeout",
+    "other": "請求逾時"
+  },
+  "server_error": {
+    "id": "server_error",
+    "other": "伺服器錯誤"
+  },
+  "bad_request": {
+    "id": "bad_request",
+    "other": "請求錯誤"
+  },
+  "unauthorized": {
+    "id": "unauthorized",
+    "other": "未授權"
+  },
+  "forbidden": {
+    "id": "forbidden",
+    "other": "禁止存取"
+  },
+  "request_failed": {
+    "id": "request_failed",
+    "other": "請求失敗"
+  },
+  "please_try_again": {
+    "id": "please_try_again",
+    "other": "請重試"
+  },
+  "something_went_wrong": {
+    "id": "something_went_wrong",
+    "other": "出錯了"
+  },
+  "try_again_later": {
+    "id": "try_again_later",
+    "other": "請稍後重試"
+  },
+  "login_success": {
+    "id": "login_success",
+    "other": "登入成功"
+  },
+  "login_failed": {
+    "id": "login_failed",
+    "other": "登入失敗"
+  },
+  "logout_success": {
+    "id": "logout_success",
+    "other": "登出成功"
+  },
+  "register_success": {
+    "id": "register_success",
+    "other": "註冊成功"
+  },
+  "account_not_found": {
+    "id": "account_not_found",
+    "other": "帳號不存在"
+  },
+  "incorrect_password": {
+    "id": "incorrect_password",
+    "other": "密碼錯誤"
+  },
+  "account_locked": {
+    "id": "account_locked",
+    "other": "帳號已鎖定"
+  },
+  "account_disabled": {
+    "id": "account_disabled",
+    "other": "帳號已停用"
+  },
+  "verification_code": {
+    "id": "verification_code",
+    "other": "驗證碼"
+  },
+  "send_code": {
+    "id": "send_code",
+    "other": "發送驗證碼"
+  },
+  "resend_code": {
+    "id": "resend_code",
+    "other": "重新發送"
+  },
+  "verify": {
+    "id": "verify",
+    "other": "驗證"
+  },
+  "code_expired": {
+    "id": "code_expired",
+    "other": "驗證碼已過期"
+  },
+  "invalid_code": {
+    "id": "invalid_code",
+    "other": "驗證碼錯誤"
+  },
+  "captcha": {
+    "id": "captcha",
+    "other": "驗證碼"
+  },
+  "admin": {
+    "id": "admin",
+    "other": "管理員"
+  },
+  "user": {
+    "id": "user",
+    "other": "使用者"
+  },
+  "guest": {
+    "id": "guest",
+    "other": "訪客"
+  },
+  "role": {
+    "id": "role",
+    "other": "角色"
+  },
+  "permission": {
+    "id": "permission",
+    "other": "權限"
+  },
+  "saved_successfully": {
+    "id": "saved_successfully",
+    "other": "儲存成功"
+  },
+  "deleted_successfully": {
+    "id": "deleted_successfully",
+    "other": "刪除成功"
+  },
+  "updated_successfully": {
+    "id": "updated_successfully",
+    "other": "更新成功"
+  },
+  "created_successfully": {
+    "id": "created_successfully",
+    "other": "建立成功"
+  },
+  "operation_successful": {
+    "id": "operation_successful",
+    "other": "操作成功"
+  },
+  "operation_failed": {
+    "id": "operation_failed",
+    "other": "操作失敗"
+  },
+  "please_wait": {
+    "id": "please_wait",
+    "other": "請稍候..."
+  },
+  "processing_request": {
+    "id": "processing_request",
+    "other": "處理中..."
+  },
+  "list": {
+    "id": "list",
+    "other": "清單"
+  },
+  "grid": {
+    "id": "grid",
+    "other": "網格"
+  },
+  "table": {
+    "id": "table",
+    "other": "表格"
+  },
+  "card": {
+    "id": "card",
+    "other": "卡片"
+  },
+  "continue": {
+    "id": "continue",
+    "other": "繼續"
+  },
+  "skip": {
+    "id": "skip",
+    "other": "跳過"
+  },
+  "finish": {
+    "id": "finish",
+    "other": "完成"
+  },
+  "ok": {
+    "id": "ok",
+    "other": "好的"
+  },
+  "got_it": {
+    "id": "got_it",
+    "other": "知道了"
+  },
+  "version": {
+    "id": "version",
+    "other": "版本"
+  },
+  "size": {
+    "id": "size",
+    "other": "大小"
+  },
+  "image": {
+    "id": "image",
+    "other": "圖片"
+  },
+  "video": {
+    "id": "video",
+    "other": "影片"
+  },
+  "audio": {
+    "id": "audio",
+    "other": "音訊"
+  },
+  "link": {
+    "id": "link",
+    "other": "連結"
+  },
+  "url": {
+    "id": "url",
+    "other": "網址"
+  },
+  "batch_delete": {
+    "id": "batch_delete",
+    "other": "批次刪除"
+  },
+  "batch_operation": {
+    "id": "batch_operation",
+    "other": "批次操作"
+  },
+  "draft_saved": {
+    "id": "draft_saved",
+    "other": "草稿已儲存"
+  },
+  "auto_saved": {
+    "id": "auto_saved",
+    "other": "自動儲存"
+  },
+  "syncing": {
+    "id": "syncing",
+    "other": "同步中..."
+  },
+  "synced": {
+    "id": "synced",
+    "other": "已同步"
   }
 }

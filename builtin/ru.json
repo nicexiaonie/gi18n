@@ -133,5 +133,793 @@
     "few": "{{.Count}} элемента",
     "many": "{{.Count}} элементов",
     "other": "{{.Count}} элементов"
+  },
+  "add": {
+    "id": "add",
+    "other": "Добавить"
+  },
+  "create": {
+    "id": "create",
+    "other": "Создать"
+  },
+  "update": {
+    "id": "update",
+    "other": "Обновить"
+  },
+  "remove": {
+    "id": "remove",
+    "other": "Удалить"
+  },
+  "copy": {
+    "id": "copy",
+    "other": "Копировать"
+  },
+  "paste": {
+    "id": "paste",
+    "other": "Вставить"
+  },
+  "cut": {
+    "id": "cut",
+    "other": "Вырезать"
+  },
+  "print": {
+    "id": "print",
+    "other": "Печать"
+  },
+  "download": {
+    "id": "download",
+    "other": "Скачать"
+  },
+  "upload": {
+    "id": "upload",
+    "other": "Загрузить"
+  },
+  "export": {
+    "id": "export",
+    "other": "Экспорт"
+  },
+  "import": {
+    "id": "import",
+    "other": "Импорт"
+  },
+  "refresh": {
+    "id": "refresh",
+    "other": "Обновить"
+  },
+  "reload": {
+    "id": "reload",
+    "other": "Перезагрузить"
+  },
+  "clear": {
+    "id": "clear",
+    "other": "Очистить"
+  },
+  "apply": {
+    "id": "apply",
+    "other": "Применить"
+  },
+  "view": {
+    "id": "view",
+    "other": "Просмотр"
+  },
+  "details": {
+    "id": "details",
+    "other": "Детали"
+  },
+  "more": {
+    "id": "more",
+    "other": "Ещё"
+  },
+  "less": {
+    "id": "less",
+    "other": "Свернуть"
+  },
+  "show": {
+    "id": "show",
+    "other": "Показать"
+  },
+  "hide": {
+    "id": "hide",
+    "other": "Скрыть"
+  },
+  "expand": {
+    "id": "expand",
+    "other": "Развернуть"
+  },
+  "collapse": {
+    "id": "collapse",
+    "other": "Свернуть"
+  },
+  "select": {
+    "id": "select",
+    "other": "Выбрать"
+  },
+  "deselect": {
+    "id": "deselect",
+    "other": "Отменить выбор"
+  },
+  "select_all": {
+    "id": "select_all",
+    "other": "Выбрать всё"
+  },
+  "deselect_all": {
+    "id": "deselect_all",
+    "other": "Снять все выделения"
+  },
+  "pending": {
+    "id": "pending",
+    "other": "В ожидании"
+  },
+  "processing": {
+    "id": "processing",
+    "other": "Обработка"
+  },
+  "completed": {
+    "id": "completed",
+    "other": "Завершено"
+  },
+  "cancelled": {
+    "id": "cancelled",
+    "other": "Отменено"
+  },
+  "expired": {
+    "id": "expired",
+    "other": "Истекло"
+  },
+  "active": {
+    "id": "active",
+    "other": "Активно"
+  },
+  "inactive": {
+    "id": "inactive",
+    "other": "Неактивно"
+  },
+  "enabled": {
+    "id": "enabled",
+    "other": "Включено"
+  },
+  "disabled": {
+    "id": "disabled",
+    "other": "Отключено"
+  },
+  "online": {
+    "id": "online",
+    "other": "В сети"
+  },
+  "offline": {
+    "id": "offline",
+    "other": "Не в сети"
+  },
+  "available": {
+    "id": "available",
+    "other": "Доступно"
+  },
+  "unavailable": {
+    "id": "unavailable",
+    "other": "Недоступно"
+  },
+  "required_field": {
+    "id": "required_field",
+    "other": "Это поле обязательно"
+  },
+  "invalid_email": {
+    "id": "invalid_email",
+    "other": "Неверный формат электронной почты"
+  },
+  "invalid_phone": {
+    "id": "invalid_phone",
+    "other": "Неверный формат телефона"
+  },
+  "invalid_format": {
+    "id": "invalid_format",
+    "other": "Неверный формат"
+  },
+  "password_too_short": {
+    "id": "password_too_short",
+    "other": "Пароль слишком короткий"
+  },
+  "password_too_weak": {
+    "id": "password_too_weak",
+    "other": "Пароль слишком слабый"
+  },
+  "passwords_not_match": {
+    "id": "passwords_not_match",
+    "other": "Пароли не совпадают"
+  },
+  "email_exists": {
+    "id": "email_exists",
+    "other": "Эта почта уже используется"
+  },
+  "username_taken": {
+    "id": "username_taken",
+    "other": "Это имя пользователя уже занято"
+  },
+  "min_length": {
+    "id": "min_length",
+    "other": "Минимальная длина {{.Min}}"
+  },
+  "max_length": {
+    "id": "max_length",
+    "other": "Максимальная длина {{.Max}}"
+  },
+  "total": {
+    "id": "total",
+    "other": "Всего"
+  },
+  "all": {
+    "id": "all",
+    "other": "Все"
+  },
+  "filter": {
+    "id": "filter",
+    "other": "Фильтр"
+  },
+  "sort": {
+    "id": "sort",
+    "other": "Сортировка"
+  },
+  "sort_by": {
+    "id": "sort_by",
+    "other": "Сортировать по"
+  },
+  "order_by": {
+    "id": "order_by",
+    "other": "Порядок"
+  },
+  "ascending": {
+    "id": "ascending",
+    "other": "По возрастанию"
+  },
+  "descending": {
+    "id": "descending",
+    "other": "По убыванию"
+  },
+  "today": {
+    "id": "today",
+    "other": "Сегодня"
+  },
+  "yesterday": {
+    "id": "yesterday",
+    "other": "Вчера"
+  },
+  "tomorrow": {
+    "id": "tomorrow",
+    "other": "Завтра"
+  },
+  "now": {
+    "id": "now",
+    "other": "Сейчас"
+  },
+  "date": {
+    "id": "date",
+    "other": "Дата"
+  },
+  "time": {
+    "id": "time",
+    "other": "Время"
+  },
+  "datetime": {
+    "id": "datetime",
+    "other": "Дата и время"
+  },
+  "created_at": {
+    "id": "created_at",
+    "other": "Дата создания"
+  },
+  "updated_at": {
+    "id": "updated_at",
+    "other": "Дата обновления"
+  },
+  "deleted_at": {
+    "id": "deleted_at",
+    "other": "Дата удаления"
+  },
+  "start_date": {
+    "id": "start_date",
+    "other": "Дата начала"
+  },
+  "end_date": {
+    "id": "end_date",
+    "other": "Дата окончания"
+  },
+  "duration": {
+    "id": "duration",
+    "other": "Длительность"
+  },
+  "file": {
+    "id": "file",
+    "other": "Файл"
+  },
+  "folder": {
+    "id": "folder",
+    "other": "Папка"
+  },
+  "upload_file": {
+    "id": "upload_file",
+    "other": "Загрузить файл"
+  },
+  "select_file": {
+    "id": "select_file",
+    "other": "Выбрать файл"
+  },
+  "file_size": {
+    "id": "file_size",
+    "other": "Размер файла"
+  },
+  "max_file_size": {
+    "id": "max_file_size",
+    "other": "Максимальный размер файла"
+  },
+  "allowed_types": {
+    "id": "allowed_types",
+    "other": "Разрешённые типы"
+  },
+  "drag_drop": {
+    "id": "drag_drop",
+    "other": "Перетащите файлы"
+  },
+  "profile": {
+    "id": "profile",
+    "other": "Профиль"
+  },
+  "settings": {
+    "id": "settings",
+    "other": "Настройки"
+  },
+  "preferences": {
+    "id": "preferences",
+    "other": "Предпочтения"
+  },
+  "account": {
+    "id": "account",
+    "other": "Аккаунт"
+  },
+  "change_password": {
+    "id": "change_password",
+    "other": "Изменить пароль"
+  },
+  "forgot_password": {
+    "id": "forgot_password",
+    "other": "Забыли пароль"
+  },
+  "reset_password": {
+    "id": "reset_password",
+    "other": "Сбросить пароль"
+  },
+  "remember_me": {
+    "id": "remember_me",
+    "other": "Запомнить меня"
+  },
+  "name": {
+    "id": "name",
+    "other": "Название"
+  },
+  "title": {
+    "id": "title",
+    "other": "Заголовок"
+  },
+  "description": {
+    "id": "description",
+    "other": "Описание"
+  },
+  "content": {
+    "id": "content",
+    "other": "Содержимое"
+  },
+  "status": {
+    "id": "status",
+    "other": "Статус"
+  },
+  "action": {
+    "id": "action",
+    "other": "Действие"
+  },
+  "type": {
+    "id": "type",
+    "other": "Тип"
+  },
+  "category": {
+    "id": "category",
+    "other": "Категория"
+  },
+  "tag": {
+    "id": "tag",
+    "other": "Тег"
+  },
+  "comment": {
+    "id": "comment",
+    "other": "Комментарий"
+  },
+  "note": {
+    "id": "note",
+    "other": "Заметка"
+  },
+  "message": {
+    "id": "message",
+    "other": "Сообщение"
+  },
+  "are_you_sure": {
+    "id": "are_you_sure",
+    "other": "Вы уверены?"
+  },
+  "confirm_delete": {
+    "id": "confirm_delete",
+    "other": "Вы действительно хотите удалить это?"
+  },
+  "confirm_action": {
+    "id": "confirm_action",
+    "other": "Вы уверены, что хотите продолжить?"
+  },
+  "operation_cancelled": {
+    "id": "operation_cancelled",
+    "other": "Операция отменена"
+  },
+  "no_data": {
+    "id": "no_data",
+    "other": "Нет данных"
+  },
+  "no_results": {
+    "id": "no_results",
+    "other": "Результаты не найдены"
+  },
+  "not_found": {
+    "id": "not_found",
+    "other": "Не найдено"
+  },
+  "page_not_found": {
+    "id": "page_not_found",
+    "other": "Страница не найдена"
+  },
+  "access_denied": {
+    "id": "access_denied",
+    "other": "Доступ запрещён"
+  },
+  "permission_denied": {
+    "id": "permission_denied",
+    "other": "Недостаточно прав"
+  },
+  "session_expired": {
+    "id": "session_expired",
+    "other": "Сеанс истёк"
+  },
+  "language": {
+    "id": "language",
+    "other": "Язык"
+  },
+  "theme": {
+    "id": "theme",
+    "other": "Тема"
+  },
+  "dark_mode": {
+    "id": "dark_mode",
+    "other": "Тёмный режим"
+  },
+  "light_mode": {
+    "id": "light_mode",
+    "other": "Светлый режим"
+  },
+  "notification": {
+    "id": "notification",
+    "other": "Уведомление"
+  },
+  "count": {
+    "id": "count",
+    "other": "Количество"
+  },
+  "total_count": {
+    "id": "total_count",
+    "other": "Общее количество"
+  },
+  "selected_count": {
+    "id": "selected_count",
+    "other": "Выбрано"
+  },
+  "new": {
+    "id": "new",
+    "other": "Новый"
+  },
+  "latest": {
+    "id": "latest",
+    "other": "Последние"
+  },
+  "popular": {
+    "id": "popular",
+    "other": "Популярное"
+  },
+  "featured": {
+    "id": "featured",
+    "other": "Избранное"
+  },
+  "recommended": {
+    "id": "recommended",
+    "other": "Рекомендуемое"
+  },
+  "favorite": {
+    "id": "favorite",
+    "other": "Избранное"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "other": "Закладка"
+  },
+  "share": {
+    "id": "share",
+    "other": "Поделиться"
+  },
+  "copy_link": {
+    "id": "copy_link",
+    "other": "Копировать ссылку"
+  },
+  "send": {
+    "id": "send",
+    "other": "Отправить"
+  },
+  "receive": {
+    "id": "receive",
+    "other": "Получить"
+  },
+  "inbox": {
+    "id": "inbox",
+    "other": "Входящие"
+  },
+  "outbox": {
+    "id": "outbox",
+    "other": "Исходящие"
+  },
+  "draft": {
+    "id": "draft",
+    "other": "Черновик"
+  },
+  "trash": {
+    "id": "trash",
+    "other": "Корзина"
+  },
+  "archive": {
+    "id": "archive",
+    "other": "Архив"
+  },
+  "restore": {
+    "id": "restore",
+    "other": "Восстановить"
+  },
+  "network_error": {
+    "id": "network_error",
+    "other": "Ошибка сети"
+  },
+  "timeout": {
+    "id": "timeout",
+    "other": "Тайм-аут"
+  },
+  "server_error": {
+    "id": "server_error",
+    "other": "Ошибка сервера"
+  },
+  "bad_request": {
+    "id": "bad_request",
+    "other": "Неверный запрос"
+  },
+  "unauthorized": {
+    "id": "unauthorized",
+    "other": "Не авторизован"
+  },
+  "forbidden": {
+    "id": "forbidden",
+    "other": "Доступ запрещён"
+  },
+  "request_failed": {
+    "id": "request_failed",
+    "other": "Запрос не выполнен"
+  },
+  "please_try_again": {
+    "id": "please_try_again",
+    "other": "Попробуйте снова"
+  },
+  "something_went_wrong": {
+    "id": "something_went_wrong",
+    "other": "Что-то пошло не так"
+  },
+  "try_again_later": {
+    "id": "try_again_later",
+    "other": "Попробуйте позже"
+  },
+  "login_success": {
+    "id": "login_success",
+    "other": "Вход выполнен успешно"
+  },
+  "login_failed": {
+    "id": "login_failed",
+    "other": "Ошибка входа"
+  },
+  "logout_success": {
+    "id": "logout_success",
+    "other": "Выход выполнен успешно"
+  },
+  "register_success": {
+    "id": "register_success",
+    "other": "Регистрация успешна"
+  },
+  "account_not_found": {
+    "id": "account_not_found",
+    "other": "Аккаунт не найден"
+  },
+  "incorrect_password": {
+    "id": "incorrect_password",
+    "other": "Неверный пароль"
+  },
+  "account_locked": {
+    "id": "account_locked",
+    "other": "Аккаунт заблокирован"
+  },
+  "account_disabled": {
+    "id": "account_disabled",
+    "other": "Аккаунт отключён"
+  },
+  "verification_code": {
+    "id": "verification_code",
+    "other": "Код подтверждения"
+  },
+  "send_code": {
+    "id": "send_code",
+    "other": "Отправить код"
+  },
+  "resend_code": {
+    "id": "resend_code",
+    "other": "Отправить повторно"
+  },
+  "verify": {
+    "id": "verify",
+    "other": "Проверить"
+  },
+  "code_expired": {
+    "id": "code_expired",
+    "other": "Код истёк"
+  },
+  "invalid_code": {
+    "id": "invalid_code",
+    "other": "Неверный код"
+  },
+  "captcha": {
+    "id": "captcha",
+    "other": "Капча"
+  },
+  "admin": {
+    "id": "admin",
+    "other": "Администратор"
+  },
+  "user": {
+    "id": "user",
+    "other": "Пользователь"
+  },
+  "guest": {
+    "id": "guest",
+    "other": "Гость"
+  },
+  "role": {
+    "id": "role",
+    "other": "Роль"
+  },
+  "permission": {
+    "id": "permission",
+    "other": "Разрешение"
+  },
+  "saved_successfully": {
+    "id": "saved_successfully",
+    "other": "Успешно сохранено"
+  },
+  "deleted_successfully": {
+    "id": "deleted_successfully",
+    "other": "Успешно удалено"
+  },
+  "updated_successfully": {
+    "id": "updated_successfully",
+    "other": "Успешно обновлено"
+  },
+  "created_successfully": {
+    "id": "created_successfully",
+    "other": "Успешно создано"
+  },
+  "operation_successful": {
+    "id": "operation_successful",
+    "other": "Операция выполнена успешно"
+  },
+  "operation_failed": {
+    "id": "operation_failed",
+    "other": "Операция не выполнена"
+  },
+  "please_wait": {
+    "id": "please_wait",
+    "other": "Пожалуйста, подождите..."
+  },
+  "processing_request": {
+    "id": "processing_request",
+    "other": "Обработка..."
+  },
+  "list": {
+    "id": "list",
+    "other": "Список"
+  },
+  "grid": {
+    "id": "grid",
+    "other": "Сетка"
+  },
+  "table": {
+    "id": "table",
+    "other": "Таблица"
+  },
+  "card": {
+    "id": "card",
+    "other": "Карточка"
+  },
+  "continue": {
+    "id": "continue",
+    "other": "Продолжить"
+  },
+  "skip": {
+    "id": "skip",
+    "other": "Пропустить"
+  },
+  "finish": {
+    "id": "finish",
+    "other": "Завершить"
+  },
+  "ok": {
+    "id": "ok",
+    "other": "ОК"
+  },
+  "got_it": {
+    "id": "got_it",
+    "other": "Понятно"
+  },
+  "version": {
+    "id": "version",
+    "other": "Версия"
+  },
+  "size": {
+    "id": "size",
+    "other": "Размер"
+  },
+  "image": {
+    "id": "image",
+    "other": "Изображение"
+  },
+  "video": {
+    "id": "video",
+    "other": "Видео"
+  },
+  "audio": {
+    "id": "audio",
+    "other": "Аудио"
+  },
+  "link": {
+    "id": "link",
+    "other": "Ссылка"
+  },
+  "url": {
+    "id": "url",
+    "other": "URL"
+  },
+  "batch_delete": {
+    "id": "batch_delete",
+    "other": "Массовое удаление"
+  },
+  "batch_operation": {
+    "id": "batch_operation",
+    "other": "Массовая операция"
+  },
+  "draft_saved": {
+    "id": "draft_saved",
+    "other": "Черновик сохранён"
+  },
+  "auto_saved": {
+    "id": "auto_saved",
+    "other": "Автосохранение"
+  },
+  "syncing": {
+    "id": "syncing",
+    "other": "Синхронизация..."
+  },
+  "synced": {
+    "id": "synced",
+    "other": "Синхронизировано"
   }
 }

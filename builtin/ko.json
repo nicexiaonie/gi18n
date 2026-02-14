@@ -130,5 +130,793 @@
   "items": {
     "id": "items",
     "other": "{{.Count}}개 항목"
+  },
+  "add": {
+    "id": "add",
+    "other": "추가"
+  },
+  "create": {
+    "id": "create",
+    "other": "생성"
+  },
+  "update": {
+    "id": "update",
+    "other": "수정"
+  },
+  "remove": {
+    "id": "remove",
+    "other": "제거"
+  },
+  "copy": {
+    "id": "copy",
+    "other": "복사"
+  },
+  "paste": {
+    "id": "paste",
+    "other": "붙여넣기"
+  },
+  "cut": {
+    "id": "cut",
+    "other": "잘라내기"
+  },
+  "print": {
+    "id": "print",
+    "other": "인쇄"
+  },
+  "download": {
+    "id": "download",
+    "other": "다운로드"
+  },
+  "upload": {
+    "id": "upload",
+    "other": "업로드"
+  },
+  "export": {
+    "id": "export",
+    "other": "내보내기"
+  },
+  "import": {
+    "id": "import",
+    "other": "가져오기"
+  },
+  "refresh": {
+    "id": "refresh",
+    "other": "새로고침"
+  },
+  "reload": {
+    "id": "reload",
+    "other": "다시 로드"
+  },
+  "clear": {
+    "id": "clear",
+    "other": "지우기"
+  },
+  "apply": {
+    "id": "apply",
+    "other": "적용"
+  },
+  "view": {
+    "id": "view",
+    "other": "보기"
+  },
+  "details": {
+    "id": "details",
+    "other": "상세정보"
+  },
+  "more": {
+    "id": "more",
+    "other": "더보기"
+  },
+  "less": {
+    "id": "less",
+    "other": "접기"
+  },
+  "show": {
+    "id": "show",
+    "other": "표시"
+  },
+  "hide": {
+    "id": "hide",
+    "other": "숨기기"
+  },
+  "expand": {
+    "id": "expand",
+    "other": "펼치기"
+  },
+  "collapse": {
+    "id": "collapse",
+    "other": "접기"
+  },
+  "select": {
+    "id": "select",
+    "other": "선택"
+  },
+  "deselect": {
+    "id": "deselect",
+    "other": "선택 해제"
+  },
+  "select_all": {
+    "id": "select_all",
+    "other": "전체 선택"
+  },
+  "deselect_all": {
+    "id": "deselect_all",
+    "other": "전체 선택 해제"
+  },
+  "pending": {
+    "id": "pending",
+    "other": "대기 중"
+  },
+  "processing": {
+    "id": "processing",
+    "other": "처리 중"
+  },
+  "completed": {
+    "id": "completed",
+    "other": "완료됨"
+  },
+  "cancelled": {
+    "id": "cancelled",
+    "other": "취소됨"
+  },
+  "expired": {
+    "id": "expired",
+    "other": "만료됨"
+  },
+  "active": {
+    "id": "active",
+    "other": "활성"
+  },
+  "inactive": {
+    "id": "inactive",
+    "other": "비활성"
+  },
+  "enabled": {
+    "id": "enabled",
+    "other": "활성화"
+  },
+  "disabled": {
+    "id": "disabled",
+    "other": "비활성화"
+  },
+  "online": {
+    "id": "online",
+    "other": "온라인"
+  },
+  "offline": {
+    "id": "offline",
+    "other": "오프라인"
+  },
+  "available": {
+    "id": "available",
+    "other": "사용 가능"
+  },
+  "unavailable": {
+    "id": "unavailable",
+    "other": "사용 불가"
+  },
+  "required_field": {
+    "id": "required_field",
+    "other": "이 항목은 필수입니다"
+  },
+  "invalid_email": {
+    "id": "invalid_email",
+    "other": "이메일 형식이 올바르지 않습니다"
+  },
+  "invalid_phone": {
+    "id": "invalid_phone",
+    "other": "전화번호 형식이 올바르지 않습니다"
+  },
+  "invalid_format": {
+    "id": "invalid_format",
+    "other": "형식이 올바르지 않습니다"
+  },
+  "password_too_short": {
+    "id": "password_too_short",
+    "other": "비밀번호가 너무 짧습니다"
+  },
+  "password_too_weak": {
+    "id": "password_too_weak",
+    "other": "비밀번호 강도가 너무 약합니다"
+  },
+  "passwords_not_match": {
+    "id": "passwords_not_match",
+    "other": "비밀번호가 일치하지 않습니다"
+  },
+  "email_exists": {
+    "id": "email_exists",
+    "other": "이미 사용 중인 이메일입니다"
+  },
+  "username_taken": {
+    "id": "username_taken",
+    "other": "이미 사용 중인 사용자 이름입니다"
+  },
+  "min_length": {
+    "id": "min_length",
+    "other": "최소 길이는 {{.Min}}입니다"
+  },
+  "max_length": {
+    "id": "max_length",
+    "other": "최대 길이는 {{.Max}}입니다"
+  },
+  "total": {
+    "id": "total",
+    "other": "전체"
+  },
+  "all": {
+    "id": "all",
+    "other": "전체"
+  },
+  "filter": {
+    "id": "filter",
+    "other": "필터"
+  },
+  "sort": {
+    "id": "sort",
+    "other": "정렬"
+  },
+  "sort_by": {
+    "id": "sort_by",
+    "other": "정렬 기준"
+  },
+  "order_by": {
+    "id": "order_by",
+    "other": "정렬 순서"
+  },
+  "ascending": {
+    "id": "ascending",
+    "other": "오름차순"
+  },
+  "descending": {
+    "id": "descending",
+    "other": "내림차순"
+  },
+  "today": {
+    "id": "today",
+    "other": "오늘"
+  },
+  "yesterday": {
+    "id": "yesterday",
+    "other": "어제"
+  },
+  "tomorrow": {
+    "id": "tomorrow",
+    "other": "내일"
+  },
+  "now": {
+    "id": "now",
+    "other": "지금"
+  },
+  "date": {
+    "id": "date",
+    "other": "날짜"
+  },
+  "time": {
+    "id": "time",
+    "other": "시간"
+  },
+  "datetime": {
+    "id": "datetime",
+    "other": "날짜 및 시간"
+  },
+  "created_at": {
+    "id": "created_at",
+    "other": "생성일시"
+  },
+  "updated_at": {
+    "id": "updated_at",
+    "other": "수정일시"
+  },
+  "deleted_at": {
+    "id": "deleted_at",
+    "other": "삭제일시"
+  },
+  "start_date": {
+    "id": "start_date",
+    "other": "시작일"
+  },
+  "end_date": {
+    "id": "end_date",
+    "other": "종료일"
+  },
+  "duration": {
+    "id": "duration",
+    "other": "기간"
+  },
+  "file": {
+    "id": "file",
+    "other": "파일"
+  },
+  "folder": {
+    "id": "folder",
+    "other": "폴더"
+  },
+  "upload_file": {
+    "id": "upload_file",
+    "other": "파일 업로드"
+  },
+  "select_file": {
+    "id": "select_file",
+    "other": "파일 선택"
+  },
+  "file_size": {
+    "id": "file_size",
+    "other": "파일 크기"
+  },
+  "max_file_size": {
+    "id": "max_file_size",
+    "other": "최대 파일 크기"
+  },
+  "allowed_types": {
+    "id": "allowed_types",
+    "other": "허용된 파일 형식"
+  },
+  "drag_drop": {
+    "id": "drag_drop",
+    "other": "드래그 앤 드롭"
+  },
+  "profile": {
+    "id": "profile",
+    "other": "프로필"
+  },
+  "settings": {
+    "id": "settings",
+    "other": "설정"
+  },
+  "preferences": {
+    "id": "preferences",
+    "other": "환경설정"
+  },
+  "account": {
+    "id": "account",
+    "other": "계정"
+  },
+  "change_password": {
+    "id": "change_password",
+    "other": "비밀번호 변경"
+  },
+  "forgot_password": {
+    "id": "forgot_password",
+    "other": "비밀번호 찾기"
+  },
+  "reset_password": {
+    "id": "reset_password",
+    "other": "비밀번호 재설정"
+  },
+  "remember_me": {
+    "id": "remember_me",
+    "other": "로그인 상태 유지"
+  },
+  "name": {
+    "id": "name",
+    "other": "이름"
+  },
+  "title": {
+    "id": "title",
+    "other": "제목"
+  },
+  "description": {
+    "id": "description",
+    "other": "설명"
+  },
+  "content": {
+    "id": "content",
+    "other": "내용"
+  },
+  "status": {
+    "id": "status",
+    "other": "상태"
+  },
+  "action": {
+    "id": "action",
+    "other": "작업"
+  },
+  "type": {
+    "id": "type",
+    "other": "유형"
+  },
+  "category": {
+    "id": "category",
+    "other": "카테고리"
+  },
+  "tag": {
+    "id": "tag",
+    "other": "태그"
+  },
+  "comment": {
+    "id": "comment",
+    "other": "댓글"
+  },
+  "note": {
+    "id": "note",
+    "other": "메모"
+  },
+  "message": {
+    "id": "message",
+    "other": "메시지"
+  },
+  "are_you_sure": {
+    "id": "are_you_sure",
+    "other": "확실합니까?"
+  },
+  "confirm_delete": {
+    "id": "confirm_delete",
+    "other": "정말 삭제하시겠습니까?"
+  },
+  "confirm_action": {
+    "id": "confirm_action",
+    "other": "계속 진행하시겠습니까?"
+  },
+  "operation_cancelled": {
+    "id": "operation_cancelled",
+    "other": "작업이 취소되었습니다"
+  },
+  "no_data": {
+    "id": "no_data",
+    "other": "데이터 없음"
+  },
+  "no_results": {
+    "id": "no_results",
+    "other": "결과를 찾을 수 없습니다"
+  },
+  "not_found": {
+    "id": "not_found",
+    "other": "찾을 수 없음"
+  },
+  "page_not_found": {
+    "id": "page_not_found",
+    "other": "페이지를 찾을 수 없습니다"
+  },
+  "access_denied": {
+    "id": "access_denied",
+    "other": "접근이 거부되었습니다"
+  },
+  "permission_denied": {
+    "id": "permission_denied",
+    "other": "권한이 없습니다"
+  },
+  "session_expired": {
+    "id": "session_expired",
+    "other": "세션이 만료되었습니다"
+  },
+  "language": {
+    "id": "language",
+    "other": "언어"
+  },
+  "theme": {
+    "id": "theme",
+    "other": "테마"
+  },
+  "dark_mode": {
+    "id": "dark_mode",
+    "other": "다크 모드"
+  },
+  "light_mode": {
+    "id": "light_mode",
+    "other": "라이트 모드"
+  },
+  "notification": {
+    "id": "notification",
+    "other": "알림"
+  },
+  "count": {
+    "id": "count",
+    "other": "개수"
+  },
+  "total_count": {
+    "id": "total_count",
+    "other": "전체 개수"
+  },
+  "selected_count": {
+    "id": "selected_count",
+    "other": "선택된 개수"
+  },
+  "new": {
+    "id": "new",
+    "other": "새로 만들기"
+  },
+  "latest": {
+    "id": "latest",
+    "other": "최신"
+  },
+  "popular": {
+    "id": "popular",
+    "other": "인기"
+  },
+  "featured": {
+    "id": "featured",
+    "other": "추천"
+  },
+  "recommended": {
+    "id": "recommended",
+    "other": "추천"
+  },
+  "favorite": {
+    "id": "favorite",
+    "other": "즐겨찾기"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "other": "북마크"
+  },
+  "share": {
+    "id": "share",
+    "other": "공유"
+  },
+  "copy_link": {
+    "id": "copy_link",
+    "other": "링크 복사"
+  },
+  "send": {
+    "id": "send",
+    "other": "보내기"
+  },
+  "receive": {
+    "id": "receive",
+    "other": "받기"
+  },
+  "inbox": {
+    "id": "inbox",
+    "other": "받은편지함"
+  },
+  "outbox": {
+    "id": "outbox",
+    "other": "보낸편지함"
+  },
+  "draft": {
+    "id": "draft",
+    "other": "임시저장"
+  },
+  "trash": {
+    "id": "trash",
+    "other": "휴지통"
+  },
+  "archive": {
+    "id": "archive",
+    "other": "보관함"
+  },
+  "restore": {
+    "id": "restore",
+    "other": "복원"
+  },
+  "network_error": {
+    "id": "network_error",
+    "other": "네트워크 오류"
+  },
+  "timeout": {
+    "id": "timeout",
+    "other": "요청 시간 초과"
+  },
+  "server_error": {
+    "id": "server_error",
+    "other": "서버 오류"
+  },
+  "bad_request": {
+    "id": "bad_request",
+    "other": "잘못된 요청"
+  },
+  "unauthorized": {
+    "id": "unauthorized",
+    "other": "인증되지 않음"
+  },
+  "forbidden": {
+    "id": "forbidden",
+    "other": "접근 금지"
+  },
+  "request_failed": {
+    "id": "request_failed",
+    "other": "요청 실패"
+  },
+  "please_try_again": {
+    "id": "please_try_again",
+    "other": "다시 시도해주세요"
+  },
+  "something_went_wrong": {
+    "id": "something_went_wrong",
+    "other": "오류가 발생했습니다"
+  },
+  "try_again_later": {
+    "id": "try_again_later",
+    "other": "나중에 다시 시도해주세요"
+  },
+  "login_success": {
+    "id": "login_success",
+    "other": "로그인 성공"
+  },
+  "login_failed": {
+    "id": "login_failed",
+    "other": "로그인 실패"
+  },
+  "logout_success": {
+    "id": "logout_success",
+    "other": "로그아웃 성공"
+  },
+  "register_success": {
+    "id": "register_success",
+    "other": "회원가입 성공"
+  },
+  "account_not_found": {
+    "id": "account_not_found",
+    "other": "계정을 찾을 수 없습니다"
+  },
+  "incorrect_password": {
+    "id": "incorrect_password",
+    "other": "비밀번호가 올바르지 않습니다"
+  },
+  "account_locked": {
+    "id": "account_locked",
+    "other": "계정이 잠겼습니다"
+  },
+  "account_disabled": {
+    "id": "account_disabled",
+    "other": "계정이 비활성화되었습니다"
+  },
+  "verification_code": {
+    "id": "verification_code",
+    "other": "인증 코드"
+  },
+  "send_code": {
+    "id": "send_code",
+    "other": "코드 전송"
+  },
+  "resend_code": {
+    "id": "resend_code",
+    "other": "재전송"
+  },
+  "verify": {
+    "id": "verify",
+    "other": "확인"
+  },
+  "code_expired": {
+    "id": "code_expired",
+    "other": "코드가 만료되었습니다"
+  },
+  "invalid_code": {
+    "id": "invalid_code",
+    "other": "코드가 올바르지 않습니다"
+  },
+  "captcha": {
+    "id": "captcha",
+    "other": "보안문자"
+  },
+  "admin": {
+    "id": "admin",
+    "other": "관리자"
+  },
+  "user": {
+    "id": "user",
+    "other": "사용자"
+  },
+  "guest": {
+    "id": "guest",
+    "other": "게스트"
+  },
+  "role": {
+    "id": "role",
+    "other": "역할"
+  },
+  "permission": {
+    "id": "permission",
+    "other": "권한"
+  },
+  "saved_successfully": {
+    "id": "saved_successfully",
+    "other": "저장되었습니다"
+  },
+  "deleted_successfully": {
+    "id": "deleted_successfully",
+    "other": "삭제되었습니다"
+  },
+  "updated_successfully": {
+    "id": "updated_successfully",
+    "other": "업데이트되었습니다"
+  },
+  "created_successfully": {
+    "id": "created_successfully",
+    "other": "생성되었습니다"
+  },
+  "operation_successful": {
+    "id": "operation_successful",
+    "other": "작업이 성공했습니다"
+  },
+  "operation_failed": {
+    "id": "operation_failed",
+    "other": "작업이 실패했습니다"
+  },
+  "please_wait": {
+    "id": "please_wait",
+    "other": "잠시만 기다려주세요..."
+  },
+  "processing_request": {
+    "id": "processing_request",
+    "other": "처리 중..."
+  },
+  "list": {
+    "id": "list",
+    "other": "목록"
+  },
+  "grid": {
+    "id": "grid",
+    "other": "그리드"
+  },
+  "table": {
+    "id": "table",
+    "other": "테이블"
+  },
+  "card": {
+    "id": "card",
+    "other": "카드"
+  },
+  "continue": {
+    "id": "continue",
+    "other": "계속"
+  },
+  "skip": {
+    "id": "skip",
+    "other": "건너뛰기"
+  },
+  "finish": {
+    "id": "finish",
+    "other": "완료"
+  },
+  "ok": {
+    "id": "ok",
+    "other": "확인"
+  },
+  "got_it": {
+    "id": "got_it",
+    "other": "알겠습니다"
+  },
+  "version": {
+    "id": "version",
+    "other": "버전"
+  },
+  "size": {
+    "id": "size",
+    "other": "크기"
+  },
+  "image": {
+    "id": "image",
+    "other": "이미지"
+  },
+  "video": {
+    "id": "video",
+    "other": "동영상"
+  },
+  "audio": {
+    "id": "audio",
+    "other": "오디오"
+  },
+  "link": {
+    "id": "link",
+    "other": "링크"
+  },
+  "url": {
+    "id": "url",
+    "other": "URL"
+  },
+  "batch_delete": {
+    "id": "batch_delete",
+    "other": "일괄 삭제"
+  },
+  "batch_operation": {
+    "id": "batch_operation",
+    "other": "일괄 작업"
+  },
+  "draft_saved": {
+    "id": "draft_saved",
+    "other": "임시저장되었습니다"
+  },
+  "auto_saved": {
+    "id": "auto_saved",
+    "other": "자동 저장됨"
+  },
+  "syncing": {
+    "id": "syncing",
+    "other": "동기화 중..."
+  },
+  "synced": {
+    "id": "synced",
+    "other": "동기화됨"
   }
 }

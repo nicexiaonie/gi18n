@@ -164,5 +164,990 @@
     "description": "项目数量，复数形式",
     "one": "{{.Count}} item",
     "other": "{{.Count}} items"
+  },
+  "add": {
+    "id": "add",
+    "description": "添加",
+    "other": "Add"
+  },
+  "create": {
+    "id": "create",
+    "description": "创建",
+    "other": "Create"
+  },
+  "update": {
+    "id": "update",
+    "description": "更新",
+    "other": "Update"
+  },
+  "remove": {
+    "id": "remove",
+    "description": "移除",
+    "other": "Remove"
+  },
+  "copy": {
+    "id": "copy",
+    "description": "复制",
+    "other": "Copy"
+  },
+  "paste": {
+    "id": "paste",
+    "description": "粘贴",
+    "other": "Paste"
+  },
+  "cut": {
+    "id": "cut",
+    "description": "剪切",
+    "other": "Cut"
+  },
+  "print": {
+    "id": "print",
+    "description": "打印",
+    "other": "Print"
+  },
+  "download": {
+    "id": "download",
+    "description": "下载",
+    "other": "Download"
+  },
+  "upload": {
+    "id": "upload",
+    "description": "上传",
+    "other": "Upload"
+  },
+  "export": {
+    "id": "export",
+    "description": "导出",
+    "other": "Export"
+  },
+  "import": {
+    "id": "import",
+    "description": "导入",
+    "other": "Import"
+  },
+  "refresh": {
+    "id": "refresh",
+    "description": "刷新",
+    "other": "Refresh"
+  },
+  "reload": {
+    "id": "reload",
+    "description": "重新加载",
+    "other": "Reload"
+  },
+  "clear": {
+    "id": "clear",
+    "description": "清空",
+    "other": "Clear"
+  },
+  "apply": {
+    "id": "apply",
+    "description": "应用",
+    "other": "Apply"
+  },
+  "view": {
+    "id": "view",
+    "description": "查看",
+    "other": "View"
+  },
+  "details": {
+    "id": "details",
+    "description": "详情",
+    "other": "Details"
+  },
+  "more": {
+    "id": "more",
+    "description": "更多",
+    "other": "More"
+  },
+  "less": {
+    "id": "less",
+    "description": "收起",
+    "other": "Less"
+  },
+  "show": {
+    "id": "show",
+    "description": "显示",
+    "other": "Show"
+  },
+  "hide": {
+    "id": "hide",
+    "description": "隐藏",
+    "other": "Hide"
+  },
+  "expand": {
+    "id": "expand",
+    "description": "展开",
+    "other": "Expand"
+  },
+  "collapse": {
+    "id": "collapse",
+    "description": "折叠",
+    "other": "Collapse"
+  },
+  "select": {
+    "id": "select",
+    "description": "选择",
+    "other": "Select"
+  },
+  "deselect": {
+    "id": "deselect",
+    "description": "取消选择",
+    "other": "Deselect"
+  },
+  "select_all": {
+    "id": "select_all",
+    "description": "全选",
+    "other": "Select All"
+  },
+  "deselect_all": {
+    "id": "deselect_all",
+    "description": "取消全选",
+    "other": "Deselect All"
+  },
+  "pending": {
+    "id": "pending",
+    "description": "待处理",
+    "other": "Pending"
+  },
+  "processing": {
+    "id": "processing",
+    "description": "处理中",
+    "other": "Processing"
+  },
+  "completed": {
+    "id": "completed",
+    "description": "已完成",
+    "other": "Completed"
+  },
+  "cancelled": {
+    "id": "cancelled",
+    "description": "已取消",
+    "other": "Cancelled"
+  },
+  "expired": {
+    "id": "expired",
+    "description": "已过期",
+    "other": "Expired"
+  },
+  "active": {
+    "id": "active",
+    "description": "活跃",
+    "other": "Active"
+  },
+  "inactive": {
+    "id": "inactive",
+    "description": "不活跃",
+    "other": "Inactive"
+  },
+  "enabled": {
+    "id": "enabled",
+    "description": "已启用",
+    "other": "Enabled"
+  },
+  "disabled": {
+    "id": "disabled",
+    "description": "已禁用",
+    "other": "Disabled"
+  },
+  "online": {
+    "id": "online",
+    "description": "在线",
+    "other": "Online"
+  },
+  "offline": {
+    "id": "offline",
+    "description": "离线",
+    "other": "Offline"
+  },
+  "available": {
+    "id": "available",
+    "description": "可用",
+    "other": "Available"
+  },
+  "unavailable": {
+    "id": "unavailable",
+    "description": "不可用",
+    "other": "Unavailable"
+  },
+  "required_field": {
+    "id": "required_field",
+    "description": "必填字段",
+    "other": "This field is required"
+  },
+  "invalid_email": {
+    "id": "invalid_email",
+    "description": "邮箱格式错误",
+    "other": "Invalid email address"
+  },
+  "invalid_phone": {
+    "id": "invalid_phone",
+    "description": "手机号格式错误",
+    "other": "Invalid phone number"
+  },
+  "invalid_format": {
+    "id": "invalid_format",
+    "description": "格式错误",
+    "other": "Invalid format"
+  },
+  "password_too_short": {
+    "id": "password_too_short",
+    "description": "密码太短",
+    "other": "Password is too short"
+  },
+  "password_too_weak": {
+    "id": "password_too_weak",
+    "description": "密码太弱",
+    "other": "Password is too weak"
+  },
+  "passwords_not_match": {
+    "id": "passwords_not_match",
+    "description": "密码不匹配",
+    "other": "Passwords do not match"
+  },
+  "email_exists": {
+    "id": "email_exists",
+    "description": "邮箱已存在",
+    "other": "Email already exists"
+  },
+  "username_taken": {
+    "id": "username_taken",
+    "description": "用户名已被占用",
+    "other": "Username is already taken"
+  },
+  "min_length": {
+    "id": "min_length",
+    "description": "最小长度",
+    "other": "Minimum length is {{.Min}}"
+  },
+  "max_length": {
+    "id": "max_length",
+    "description": "最大长度",
+    "other": "Maximum length is {{.Max}}"
+  },
+  "total": {
+    "id": "total",
+    "description": "总计",
+    "other": "Total"
+  },
+  "all": {
+    "id": "all",
+    "description": "全部",
+    "other": "All"
+  },
+  "filter": {
+    "id": "filter",
+    "description": "筛选",
+    "other": "Filter"
+  },
+  "sort": {
+    "id": "sort",
+    "description": "排序",
+    "other": "Sort"
+  },
+  "sort_by": {
+    "id": "sort_by",
+    "description": "排序方式",
+    "other": "Sort By"
+  },
+  "order_by": {
+    "id": "order_by",
+    "description": "排序方式",
+    "other": "Order By"
+  },
+  "ascending": {
+    "id": "ascending",
+    "description": "升序",
+    "other": "Ascending"
+  },
+  "descending": {
+    "id": "descending",
+    "description": "降序",
+    "other": "Descending"
+  },
+  "today": {
+    "id": "today",
+    "description": "今天",
+    "other": "Today"
+  },
+  "yesterday": {
+    "id": "yesterday",
+    "description": "昨天",
+    "other": "Yesterday"
+  },
+  "tomorrow": {
+    "id": "tomorrow",
+    "description": "明天",
+    "other": "Tomorrow"
+  },
+  "now": {
+    "id": "now",
+    "description": "现在",
+    "other": "Now"
+  },
+  "date": {
+    "id": "date",
+    "description": "日期",
+    "other": "Date"
+  },
+  "time": {
+    "id": "time",
+    "description": "时间",
+    "other": "Time"
+  },
+  "datetime": {
+    "id": "datetime",
+    "description": "日期时间",
+    "other": "Date & Time"
+  },
+  "created_at": {
+    "id": "created_at",
+    "description": "创建时间",
+    "other": "Created At"
+  },
+  "updated_at": {
+    "id": "updated_at",
+    "description": "更新时间",
+    "other": "Updated At"
+  },
+  "deleted_at": {
+    "id": "deleted_at",
+    "description": "删除时间",
+    "other": "Deleted At"
+  },
+  "start_date": {
+    "id": "start_date",
+    "description": "开始日期",
+    "other": "Start Date"
+  },
+  "end_date": {
+    "id": "end_date",
+    "description": "结束日期",
+    "other": "End Date"
+  },
+  "duration": {
+    "id": "duration",
+    "description": "时长",
+    "other": "Duration"
+  },
+  "file": {
+    "id": "file",
+    "description": "文件",
+    "other": "File"
+  },
+  "folder": {
+    "id": "folder",
+    "description": "文件夹",
+    "other": "Folder"
+  },
+  "upload_file": {
+    "id": "upload_file",
+    "description": "上传文件",
+    "other": "Upload File"
+  },
+  "select_file": {
+    "id": "select_file",
+    "description": "选择文件",
+    "other": "Select File"
+  },
+  "file_size": {
+    "id": "file_size",
+    "description": "文件大小",
+    "other": "File Size"
+  },
+  "max_file_size": {
+    "id": "max_file_size",
+    "description": "最大文件大小",
+    "other": "Max File Size"
+  },
+  "allowed_types": {
+    "id": "allowed_types",
+    "description": "允许的文件类型",
+    "other": "Allowed Types"
+  },
+  "drag_drop": {
+    "id": "drag_drop",
+    "description": "拖拽上传",
+    "other": "Drag & Drop"
+  },
+  "profile": {
+    "id": "profile",
+    "description": "个人资料",
+    "other": "Profile"
+  },
+  "settings": {
+    "id": "settings",
+    "description": "设置",
+    "other": "Settings"
+  },
+  "preferences": {
+    "id": "preferences",
+    "description": "偏好设置",
+    "other": "Preferences"
+  },
+  "account": {
+    "id": "account",
+    "description": "账户",
+    "other": "Account"
+  },
+  "change_password": {
+    "id": "change_password",
+    "description": "修改密码",
+    "other": "Change Password"
+  },
+  "forgot_password": {
+    "id": "forgot_password",
+    "description": "忘记密码",
+    "other": "Forgot Password"
+  },
+  "reset_password": {
+    "id": "reset_password",
+    "description": "重置密码",
+    "other": "Reset Password"
+  },
+  "remember_me": {
+    "id": "remember_me",
+    "description": "记住我",
+    "other": "Remember Me"
+  },
+  "name": {
+    "id": "name",
+    "description": "名称",
+    "other": "Name"
+  },
+  "title": {
+    "id": "title",
+    "description": "标题",
+    "other": "Title"
+  },
+  "description": {
+    "id": "description",
+    "description": "描述",
+    "other": "Description"
+  },
+  "content": {
+    "id": "content",
+    "description": "内容",
+    "other": "Content"
+  },
+  "status": {
+    "id": "status",
+    "description": "状态",
+    "other": "Status"
+  },
+  "action": {
+    "id": "action",
+    "description": "操作",
+    "other": "Action"
+  },
+  "type": {
+    "id": "type",
+    "description": "类型",
+    "other": "Type"
+  },
+  "category": {
+    "id": "category",
+    "description": "分类",
+    "other": "Category"
+  },
+  "tag": {
+    "id": "tag",
+    "description": "标签",
+    "other": "Tag"
+  },
+  "comment": {
+    "id": "comment",
+    "description": "评论",
+    "other": "Comment"
+  },
+  "note": {
+    "id": "note",
+    "description": "备注",
+    "other": "Note"
+  },
+  "message": {
+    "id": "message",
+    "description": "消息",
+    "other": "Message"
+  },
+  "are_you_sure": {
+    "id": "are_you_sure",
+    "description": "确认操作",
+    "other": "Are you sure?"
+  },
+  "confirm_delete": {
+    "id": "confirm_delete",
+    "description": "确认删除",
+    "other": "Are you sure you want to delete this?"
+  },
+  "confirm_action": {
+    "id": "confirm_action",
+    "description": "确认操作",
+    "other": "Are you sure you want to proceed?"
+  },
+  "operation_cancelled": {
+    "id": "operation_cancelled",
+    "description": "操作已取消",
+    "other": "Operation cancelled"
+  },
+  "no_data": {
+    "id": "no_data",
+    "description": "无数据",
+    "other": "No data"
+  },
+  "no_results": {
+    "id": "no_results",
+    "description": "无结果",
+    "other": "No results found"
+  },
+  "not_found": {
+    "id": "not_found",
+    "description": "未找到",
+    "other": "Not found"
+  },
+  "page_not_found": {
+    "id": "page_not_found",
+    "description": "页面未找到",
+    "other": "Page not found"
+  },
+  "access_denied": {
+    "id": "access_denied",
+    "description": "访问被拒绝",
+    "other": "Access denied"
+  },
+  "permission_denied": {
+    "id": "permission_denied",
+    "description": "权限不足",
+    "other": "Permission denied"
+  },
+  "session_expired": {
+    "id": "session_expired",
+    "description": "会话已过期",
+    "other": "Session expired"
+  },
+  "language": {
+    "id": "language",
+    "description": "语言",
+    "other": "Language"
+  },
+  "theme": {
+    "id": "theme",
+    "description": "主题",
+    "other": "Theme"
+  },
+  "dark_mode": {
+    "id": "dark_mode",
+    "description": "暗黑模式",
+    "other": "Dark Mode"
+  },
+  "light_mode": {
+    "id": "light_mode",
+    "description": "明亮模式",
+    "other": "Light Mode"
+  },
+  "notification": {
+    "id": "notification",
+    "description": "通知",
+    "other": "Notification"
+  },
+  "count": {
+    "id": "count",
+    "description": "数量",
+    "other": "Count"
+  },
+  "total_count": {
+    "id": "total_count",
+    "description": "总数",
+    "other": "Total Count"
+  },
+  "selected_count": {
+    "id": "selected_count",
+    "description": "已选数量",
+    "other": "Selected Count"
+  },
+  "new": {
+    "id": "new",
+    "description": "新",
+    "other": "New"
+  },
+  "latest": {
+    "id": "latest",
+    "description": "最新",
+    "other": "Latest"
+  },
+  "popular": {
+    "id": "popular",
+    "description": "热门",
+    "other": "Popular"
+  },
+  "featured": {
+    "id": "featured",
+    "description": "精选",
+    "other": "Featured"
+  },
+  "recommended": {
+    "id": "recommended",
+    "description": "推荐",
+    "other": "Recommended"
+  },
+  "favorite": {
+    "id": "favorite",
+    "description": "收藏",
+    "other": "Favorite"
+  },
+  "bookmark": {
+    "id": "bookmark",
+    "description": "书签",
+    "other": "Bookmark"
+  },
+  "share": {
+    "id": "share",
+    "description": "分享",
+    "other": "Share"
+  },
+  "copy_link": {
+    "id": "copy_link",
+    "description": "复制链接",
+    "other": "Copy Link"
+  },
+  "send": {
+    "id": "send",
+    "description": "发送",
+    "other": "Send"
+  },
+  "receive": {
+    "id": "receive",
+    "description": "接收",
+    "other": "Receive"
+  },
+  "inbox": {
+    "id": "inbox",
+    "description": "收件箱",
+    "other": "Inbox"
+  },
+  "outbox": {
+    "id": "outbox",
+    "description": "发件箱",
+    "other": "Outbox"
+  },
+  "draft": {
+    "id": "draft",
+    "description": "草稿",
+    "other": "Draft"
+  },
+  "trash": {
+    "id": "trash",
+    "description": "回收站",
+    "other": "Trash"
+  },
+  "archive": {
+    "id": "archive",
+    "description": "归档",
+    "other": "Archive"
+  },
+  "restore": {
+    "id": "restore",
+    "description": "恢复",
+    "other": "Restore"
+  },
+  "network_error": {
+    "id": "network_error",
+    "description": "网络错误",
+    "other": "Network Error"
+  },
+  "timeout": {
+    "id": "timeout",
+    "description": "请求超时",
+    "other": "Timeout"
+  },
+  "server_error": {
+    "id": "server_error",
+    "description": "服务器错误",
+    "other": "Server Error"
+  },
+  "bad_request": {
+    "id": "bad_request",
+    "description": "请求错误",
+    "other": "Bad Request"
+  },
+  "unauthorized": {
+    "id": "unauthorized",
+    "description": "未授权",
+    "other": "Unauthorized"
+  },
+  "forbidden": {
+    "id": "forbidden",
+    "description": "禁止访问",
+    "other": "Forbidden"
+  },
+  "request_failed": {
+    "id": "request_failed",
+    "description": "请求失败",
+    "other": "Request Failed"
+  },
+  "please_try_again": {
+    "id": "please_try_again",
+    "description": "请重试",
+    "other": "Please try again"
+  },
+  "something_went_wrong": {
+    "id": "something_went_wrong",
+    "description": "出错了",
+    "other": "Something went wrong"
+  },
+  "try_again_later": {
+    "id": "try_again_later",
+    "description": "请稍后重试",
+    "other": "Please try again later"
+  },
+  "login_success": {
+    "id": "login_success",
+    "description": "登录成功",
+    "other": "Login successful"
+  },
+  "login_failed": {
+    "id": "login_failed",
+    "description": "登录失败",
+    "other": "Login failed"
+  },
+  "logout_success": {
+    "id": "logout_success",
+    "description": "退出成功",
+    "other": "Logout successful"
+  },
+  "register_success": {
+    "id": "register_success",
+    "description": "注册成功",
+    "other": "Registration successful"
+  },
+  "account_not_found": {
+    "id": "account_not_found",
+    "description": "账号不存在",
+    "other": "Account not found"
+  },
+  "incorrect_password": {
+    "id": "incorrect_password",
+    "description": "密码错误",
+    "other": "Incorrect password"
+  },
+  "account_locked": {
+    "id": "account_locked",
+    "description": "账号已锁定",
+    "other": "Account locked"
+  },
+  "account_disabled": {
+    "id": "account_disabled",
+    "description": "账号已禁用",
+    "other": "Account disabled"
+  },
+  "verification_code": {
+    "id": "verification_code",
+    "description": "验证码",
+    "other": "Verification Code"
+  },
+  "send_code": {
+    "id": "send_code",
+    "description": "发送验证码",
+    "other": "Send Code"
+  },
+  "resend_code": {
+    "id": "resend_code",
+    "description": "重新发送",
+    "other": "Resend Code"
+  },
+  "verify": {
+    "id": "verify",
+    "description": "验证",
+    "other": "Verify"
+  },
+  "code_expired": {
+    "id": "code_expired",
+    "description": "验证码已过期",
+    "other": "Code expired"
+  },
+  "invalid_code": {
+    "id": "invalid_code",
+    "description": "验证码错误",
+    "other": "Invalid code"
+  },
+  "captcha": {
+    "id": "captcha",
+    "description": "验证码",
+    "other": "Captcha"
+  },
+  "admin": {
+    "id": "admin",
+    "description": "管理员",
+    "other": "Admin"
+  },
+  "user": {
+    "id": "user",
+    "description": "用户",
+    "other": "User"
+  },
+  "guest": {
+    "id": "guest",
+    "description": "访客",
+    "other": "Guest"
+  },
+  "role": {
+    "id": "role",
+    "description": "角色",
+    "other": "Role"
+  },
+  "permission": {
+    "id": "permission",
+    "description": "权限",
+    "other": "Permission"
+  },
+  "saved_successfully": {
+    "id": "saved_successfully",
+    "description": "保存成功",
+    "other": "Saved successfully"
+  },
+  "deleted_successfully": {
+    "id": "deleted_successfully",
+    "description": "删除成功",
+    "other": "Deleted successfully"
+  },
+  "updated_successfully": {
+    "id": "updated_successfully",
+    "description": "更新成功",
+    "other": "Updated successfully"
+  },
+  "created_successfully": {
+    "id": "created_successfully",
+    "description": "创建成功",
+    "other": "Created successfully"
+  },
+  "operation_successful": {
+    "id": "operation_successful",
+    "description": "操作成功",
+    "other": "Operation successful"
+  },
+  "operation_failed": {
+    "id": "operation_failed",
+    "description": "操作失败",
+    "other": "Operation failed"
+  },
+  "please_wait": {
+    "id": "please_wait",
+    "description": "请稍候",
+    "other": "Please wait..."
+  },
+  "processing_request": {
+    "id": "processing_request",
+    "description": "处理中",
+    "other": "Processing..."
+  },
+  "list": {
+    "id": "list",
+    "description": "列表",
+    "other": "List"
+  },
+  "grid": {
+    "id": "grid",
+    "description": "网格",
+    "other": "Grid"
+  },
+  "table": {
+    "id": "table",
+    "description": "表格",
+    "other": "Table"
+  },
+  "card": {
+    "id": "card",
+    "description": "卡片",
+    "other": "Card"
+  },
+  "continue": {
+    "id": "continue",
+    "description": "继续",
+    "other": "Continue"
+  },
+  "skip": {
+    "id": "skip",
+    "description": "跳过",
+    "other": "Skip"
+  },
+  "finish": {
+    "id": "finish",
+    "description": "完成",
+    "other": "Finish"
+  },
+  "ok": {
+    "id": "ok",
+    "description": "好的",
+    "other": "OK"
+  },
+  "got_it": {
+    "id": "got_it",
+    "description": "知道了",
+    "other": "Got it"
+  },
+  "version": {
+    "id": "version",
+    "description": "版本",
+    "other": "Version"
+  },
+  "size": {
+    "id": "size",
+    "description": "大小",
+    "other": "Size"
+  },
+  "image": {
+    "id": "image",
+    "description": "图片",
+    "other": "Image"
+  },
+  "video": {
+    "id": "video",
+    "description": "视频",
+    "other": "Video"
+  },
+  "audio": {
+    "id": "audio",
+    "description": "音频",
+    "other": "Audio"
+  },
+  "link": {
+    "id": "link",
+    "description": "链接",
+    "other": "Link"
+  },
+  "url": {
+    "id": "url",
+    "description": "链接地址",
+    "other": "URL"
+  },
+  "batch_delete": {
+    "id": "batch_delete",
+    "description": "批量删除",
+    "other": "Batch Delete"
+  },
+  "batch_operation": {
+    "id": "batch_operation",
+    "description": "批量操作",
+    "other": "Batch Operation"
+  },
+  "draft_saved": {
+    "id": "draft_saved",
+    "description": "草稿已保存",
+    "other": "Draft saved"
+  },
+  "auto_saved": {
+    "id": "auto_saved",
+    "description": "自动保存",
+    "other": "Auto saved"
+  },
+  "syncing": {
+    "id": "syncing",
+    "description": "同步中",
+    "other": "Syncing..."
+  },
+  "synced": {
+    "id": "synced",
+    "description": "已同步",
+    "other": "Synced"
   }
 }
