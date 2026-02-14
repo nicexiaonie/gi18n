@@ -230,21 +230,19 @@ func (b *Bundle) flattenMessages(prefix string, data map[string]interface{}) map
 	return result
 }
 
+// messageObjectKeys go-i18n 消息对象的特征字段（用于快速查找）
+var messageObjectKeys = map[string]struct{}{
+	"one": {}, "other": {}, "zero": {},
+	"two": {}, "few": {}, "many": {},
+	"description": {}, "hash": {},
+}
+
 // isMessageObject 判断是否为 go-i18n 消息对象
 func isMessageObject(obj map[string]interface{}) bool {
-	// 如果包含复数字段，认为是消息对象
-	pluralKeys := []string{"one", "other", "zero", "two", "few", "many"}
-	for _, key := range pluralKeys {
-		if _, exists := obj[key]; exists {
+	for key := range obj {
+		if _, ok := messageObjectKeys[key]; ok {
 			return true
 		}
-	}
-	// 如果包含 description 或 hash，也认为是消息对象
-	if _, exists := obj["description"]; exists {
-		return true
-	}
-	if _, exists := obj["hash"]; exists {
-		return true
 	}
 	return false
 }

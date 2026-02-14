@@ -10,47 +10,23 @@ type ctxKey struct{}
 
 var langCtxKey = ctxKey{}
 
-// WithLang 将语言设置注入到 context 中
-func WithLang(ctx context.Context, lang string) context.Context {
+// ========== Context 集成 ==========
+
+// ContextWithLang 将语言设置注入到 context 中
+//
+//	ctx := gi18n.ContextWithLang(ctx, "zh-CN")
+//	gi18n.T("hello", gi18n.WithContext(ctx))
+func ContextWithLang(ctx context.Context, lang string) context.Context {
 	return context.WithValue(ctx, langCtxKey, normalizeLanguageTag(lang))
 }
 
 // LangFromContext 从 context 获取语言
+// 如果 context 中没有语言信息，返回全局默认语言
 func LangFromContext(ctx context.Context) string {
 	if lang, ok := ctx.Value(langCtxKey).(string); ok {
 		return lang
 	}
 	return Default().GetLang()
-}
-
-// TC 从 context 获取语言并翻译
-func TC(ctx context.Context, id string) string {
-	return TL(LangFromContext(ctx), id)
-}
-
-// TranslateContext TC 的别名
-func TranslateContext(ctx context.Context, id string) string {
-	return TC(ctx, id)
-}
-
-// TCf 从 context 获取语言并带参数翻译
-func TCf(ctx context.Context, id string, args ...interface{}) string {
-	return TLf(LangFromContext(ctx), id, args...)
-}
-
-// TranslateContextWith TCf 的别名
-func TranslateContextWith(ctx context.Context, id string, args ...interface{}) string {
-	return TCf(ctx, id, args...)
-}
-
-// TCp 从 context 获取语言并带复数翻译
-func TCp(ctx context.Context, id string, count int, args ...interface{}) string {
-	return TLp(LangFromContext(ctx), id, count, args...)
-}
-
-// TranslateContextPlural TCp 的别名
-func TranslateContextPlural(ctx context.Context, id string, count int, args ...interface{}) string {
-	return TCp(ctx, id, count, args...)
 }
 
 // ========== HTTP 中间件 ==========
@@ -87,6 +63,20 @@ func DefaultMiddlewareConfig() *MiddlewareConfig {
 }
 
 // Middleware 创建 HTTP 中间件
+//
+// 标准库:
+//
+//	mux.Handle("/", gi18n.Middleware(nil)(handler))
+//
+// Gin:
+//
+//	r.Use(func(c *gin.Context) {
+//	    handler := gi18n.Middleware(nil)(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+//	        c.Request = r
+//	        c.Next()
+//	    }))
+//	    handler.ServeHTTP(c.Writer, c.Request)
+//	})
 func Middleware(cfg *MiddlewareConfig) func(http.Handler) http.Handler {
 	if cfg == nil {
 		cfg = DefaultMiddlewareConfig()
@@ -95,7 +85,7 @@ func Middleware(cfg *MiddlewareConfig) func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			lang := detectLanguage(r, cfg)
-			ctx := WithLang(r.Context(), lang)
+			ctx := ContextWithLang(r.Context(), lang)
 			next.ServeHTTP(w, r.WithContext(ctx))
 		})
 	}
@@ -121,7 +111,6 @@ func detectLanguage(r *http.Request, cfg *MiddlewareConfig) string {
 		}
 	}
 
-	// 使用默认语言
 	if cfg.DefaultLang != "" {
 		return normalizeLanguageTag(cfg.DefaultLang)
 	}
@@ -134,14 +123,13 @@ func parseAcceptLanguage(header string) string {
 		return ""
 	}
 
-	// 简单解析，取第一个语言
+	// 取第一个语言，去掉权重
 	// Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
 	parts := strings.Split(header, ",")
 	if len(parts) == 0 {
 		return ""
 	}
 
-	// 取第一个，去掉权重
 	lang := strings.TrimSpace(parts[0])
 	if idx := strings.Index(lang, ";"); idx > 0 {
 		lang = lang[:idx]
@@ -150,11 +138,52 @@ func parseAcceptLanguage(header string) string {
 	return lang
 }
 
-// ========== Gin 适配 ==========
+// ========== 已废弃方法（向后兼容） ==========
 
-// GinMiddleware 返回 Gin 风格的中间件函数
-// 使用方式: router.Use(gi18n.GinMiddleware(nil))
-func GinMiddleware(cfg *MiddlewareConfig) func(c interface{ Next(); Request() *http.Request; Set(key string, value interface{}) }) {
+// Deprecated: Use ContextWithLang instead.
+// 注意: 此函数在新版本中签名已变更为 Option 类型的 WithLang(lang string)。
+// 原 WithLang(ctx, lang) 请改用 ContextWithLang(ctx, lang)。
+
+// Deprecated: Use T(id, WithContext(ctx)) instead.
+func TC(ctx context.Context, id string) string {
+	return T(id, WithContext(ctx))
+}
+
+// Deprecated: Use T(id, WithContext(ctx)) instead.
+func TranslateContext(ctx context.Context, id string) string {
+	return TC(ctx, id)
+}
+
+// Deprecated: Use T(id, WithContext(ctx), WithData(args...)) instead.
+func TCf(ctx context.Context, id string, args ...interface{}) string {
+	return T(id, WithContext(ctx), WithData(args...))
+}
+
+// Deprecated: Use T(id, WithContext(ctx), WithData(args...)) instead.
+func TranslateContextWith(ctx context.Context, id string, args ...interface{}) string {
+	return TCf(ctx, id, args...)
+}
+
+// Deprecated: Use T(id, WithContext(ctx), WithCount(count)) instead.
+func TCp(ctx context.Context, id string, count int, args ...interface{}) string {
+	opts := []Option{WithContext(ctx), WithCount(count)}
+	if len(args) > 0 {
+		opts = append(opts, WithData(args...))
+	}
+	return T(id, opts...)
+}
+
+// Deprecated: Use T(id, WithContext(ctx), WithCount(count)) instead.
+func TranslateContextPlural(ctx context.Context, id string, count int, args ...interface{}) string {
+	return TCp(ctx, id, count, args...)
+}
+
+// Deprecated: Use Middleware instead. Gin 可直接使用标准 Middleware 适配。
+func GinMiddleware(cfg *MiddlewareConfig) func(c interface {
+	Next()
+	Request() *http.Request
+	Set(key string, value interface{})
+}) {
 	if cfg == nil {
 		cfg = DefaultMiddlewareConfig()
 	}
@@ -170,7 +199,7 @@ func GinMiddleware(cfg *MiddlewareConfig) func(c interface{ Next(); Request() *h
 	}
 }
 
-// LangFromGin 从 Gin context 获取语言
+// Deprecated: Use T(id, WithContext(ctx)) with standard Middleware instead.
 func LangFromGin(c interface{ GetString(key string) string }) string {
 	if lang := c.GetString("gi18n_lang"); lang != "" {
 		return lang

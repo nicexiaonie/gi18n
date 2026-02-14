@@ -1,17 +1,21 @@
 # gi18n
 
-基于 [go-i18n](https://github.com/nicksnyder/go-i18n) 封装的简单易用的 Go 国际化库。
+[![Go Reference](https://pkg.go.dev/badge/github.com/nicexiaonie/gi18n.svg)](https://pkg.go.dev/github.com/nicexiaonie/gi18n)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nicexiaonie/gi18n)](https://goreportcard.com/report/github.com/nicexiaonie/gi18n)
+
+简单易用的 Go 国际化库，基于 [go-i18n](https://github.com/nicksnyder/go-i18n) 封装。
+
+**一个 `T()` 函数覆盖所有翻译场景。**
 
 ## 特性
 
-- **零配置启动**: 内置 6 种语言的通用词条，开箱即用
-- **多格式支持**: JSON、YAML、TOML 全部支持
-- **灵活加载**: 支持路径加载、embed.FS 加载、内容加载
-- **嵌套展平**: 支持嵌套结构，自动展平为扁平 key
-- **语言标签兼容**: 兼容 `zh-CN`、`zh_CN`、`zh-Hans` 等格式
-- **回退机制**: 找不到翻译时自动回退到默认语言
-- **HTTP 中间件**: 内置 HTTP 中间件，支持 Gin 等框架
-- **两套 API**: 提供简短版和完整版方法名
+- **极简 API** — 一个 `T()` + Option 组合，替代记忆十几个方法
+- **零配置** — 内置 6 种语言通用词条，开箱即用
+- **多格式** — JSON / YAML / TOML 全部支持
+- **嵌套展平** — 支持 `common.confirm` 风格的嵌套 key
+- **可观测** — MissHandler 回调 + Logger 接口，缺失翻译不再静默
+- **HTTP 中间件** — 内置标准库中间件，自动检测语言
+- **线程安全** — 全部方法并发安全
 
 ## 安装
 
@@ -19,7 +23,7 @@
 go get github.com/nicexiaonie/gi18n
 ```
 
-## 快速开始
+## 30 秒快速开始
 
 ```go
 package main
@@ -32,21 +36,66 @@ import (
 func main() {
     // 内置语言包已自动加载，直接使用
     gi18n.SetLang("zh-CN")
-    fmt.Println(gi18n.T("confirm"))  // 输出: 确定
-    fmt.Println(gi18n.T("cancel"))   // 输出: 取消
+    fmt.Println(gi18n.T("confirm"))  // 确定
+    fmt.Println(gi18n.T("cancel"))   // 取消
 
     // 切换语言
-    gi18n.SetLang("en")
-    fmt.Println(gi18n.T("confirm"))  // 输出: OK
+    fmt.Println(gi18n.T("confirm", gi18n.WithLang("en")))  // OK
 
     // 带参数
-    gi18n.SetLang("zh-CN")
-    fmt.Println(gi18n.Tf("greeting", "Name", "张三"))  // 输出: 你好，张三！
+    fmt.Println(gi18n.T("greeting", gi18n.WithData("Name", "张三")))  // 你好，张三！
 
     // 复数
-    fmt.Println(gi18n.Tp("items", 5))  // 输出: 5 个项目
+    fmt.Println(gi18n.T("items", gi18n.WithCount(5)))  // 5 个项目
 }
 ```
+
+## 核心 API
+
+只需记住 **1 个翻译函数 + 5 个选项**：
+
+```go
+gi18n.T(id string, opts ...Option) string
+```
+
+| 选项 | 说明 | 示例 |
+|------|------|------|
+| `WithLang(lang)` | 指定语言 | `T("hi", WithLang("zh-CN"))` |
+| `WithData(kv...)` | 模板参数 (key-value) | `T("hi", WithData("Name", "张三"))` |
+| `WithMap(m)` | 模板参数 (map) | `T("hi", WithMap(data))` |
+| `WithCount(n)` | 复数 | `T("items", WithCount(5))` |
+| `WithContext(ctx)` | 从 Context 获取语言 | `T("hi", WithContext(ctx))` |
+
+选项可自由组合：
+
+```go
+// 指定语言 + 参数
+gi18n.T("greeting", gi18n.WithLang("en"), gi18n.WithData("Name", "Alice"))
+
+// 指定语言 + 复数
+gi18n.T("items", gi18n.WithLang("en"), gi18n.WithCount(3))
+
+// Context + 参数
+gi18n.T("greeting", gi18n.WithContext(ctx), gi18n.WithData("Name", "张三"))
+```
+
+### 语言管理
+
+| 函数 | 说明 |
+|------|------|
+| `SetLang(lang)` | 设置当前语言 |
+| `GetLang()` | 获取当前语言 |
+| `Languages()` | 获取已加载的语言列表 |
+| `SetFallbackLang(lang)` | 设置回退语言 |
+
+### 加载方法
+
+| 函数 | 说明 |
+|------|------|
+| `Load(dir)` | 从目录加载 |
+| `LoadFS(fs, root)` | 从 embed.FS 加载 |
+| `LoadContent(lang, format, data)` | 从字节内容加载 |
+| `LoadMessages(lang, messages)` | 从 map 直接加载 |
 
 ## 加载自定义语言包
 
@@ -69,8 +118,8 @@ gi18n.LoadFS(localesFS, "locales")
 ### 从内容加载
 
 ```go
-zhData := []byte(`{"hello": "你好", "world": "世界"}`)
-gi18n.LoadContent("zh-CN", "json", zhData)
+data := []byte(`{"hello": "你好", "world": "世界"}`)
+gi18n.LoadContent("zh-CN", "json", data)
 ```
 
 ### 直接注册消息
@@ -115,49 +164,63 @@ gi18n.T("common.confirm")       // 确定
 gi18n.T("user.profile.title")   // 个人资料
 ```
 
-### go-i18n 完整格式（支持复数）
+### 复数格式
 
 ```json
 {
   "items": {
-    "id": "items",
-    "description": "项目数量",
-    "one": "{{.Count}} 个项目",
-    "other": "{{.Count}} 个项目"
+    "one": "{{.Count}} item",
+    "other": "{{.Count}} items"
   }
 }
 ```
 
-## API 参考
+## 配置
 
-### 翻译方法
+### 基础配置
 
-| 简短版 | 完整版 | 说明 |
-|-------|--------|-----|
-| `T(id)` | `Translate(id)` | 简单翻译 |
-| `TL(lang, id)` | `TranslateLang(lang, id)` | 指定语言翻译 |
-| `Tf(id, args...)` | `TranslateWith(id, args...)` | 带参数翻译 |
-| `TLf(lang, id, args...)` | `TranslateLangWith(...)` | 指定语言带参数 |
-| `Tp(id, count, args...)` | `TranslatePlural(...)` | 复数翻译 |
-| `TLp(lang, id, count, args...)` | `TranslateLangPlural(...)` | 指定语言复数 |
-| `TC(ctx, id)` | `TranslateContext(ctx, id)` | 从 context 获取语言 |
+```go
+gi18n.Init(&gi18n.Config{
+    DefaultLang:  "zh-CN",
+    FallbackLang: "en",
+})
+```
 
-### 语言设置
+### 翻译缺失处理
 
-| 简短版 | 完整版 | 说明 |
-|-------|--------|-----|
-| `SetLang(lang)` | `SetLanguage(lang)` | 设置当前语言 |
-| `GetLang()` | `GetLanguage()` | 获取当前语言 |
-| `Langs()` | `GetLanguages()` | 获取支持的语言列表 |
+```go
+gi18n.Init(&gi18n.Config{
+    // 缺失时回调（用于日志/监控）
+    MissHandler: func(lang, id string) {
+        log.Printf("missing translation: lang=%s, id=%s", lang, id)
+    },
 
-### 加载方法
+    // 缺失策略: MissReturnID（默认）或 MissReturnEmpty
+    MissPolicy: gi18n.MissReturnID,
+})
+```
 
-| 方法 | 说明 |
-|-----|------|
-| `Load(dir)` | 从目录加载 |
-| `LoadFS(fs, root)` | 从 embed.FS 加载 |
-| `LoadContent(lang, format, data)` | 从内容加载 |
-| `LoadMessages(lang, messages)` | 加载消息映射 |
+### 日志集成
+
+```go
+// 兼容 slog
+gi18n.Init(&gi18n.Config{
+    Logger: slog.Default(),
+})
+
+// 兼容任何实现了 Warn(msg string, args ...any) 的接口
+```
+
+### 多实例
+
+```go
+bundle := gi18n.New(&gi18n.Config{
+    DefaultLang:  "zh-CN",
+    FallbackLang: "en",
+})
+bundle.Load("./locales")
+bundle.T("hello")
+```
 
 ## HTTP 中间件
 
@@ -166,23 +229,28 @@ gi18n.T("user.profile.title")   // 个人资料
 ```go
 mux := http.NewServeMux()
 mux.Handle("/", gi18n.Middleware(nil)(yourHandler))
+
+// 在 handler 中使用
+func handler(w http.ResponseWriter, r *http.Request) {
+    msg := gi18n.T("hello", gi18n.WithContext(r.Context()))
+    w.Write([]byte(msg))
+}
 ```
 
-### Gin
+### Gin 集成
 
 ```go
 r := gin.Default()
 r.Use(func(c *gin.Context) {
-    middleware := gi18n.Middleware(nil)
-    middleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    handler := gi18n.Middleware(nil)(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
         c.Request = r
         c.Next()
-    })).ServeHTTP(c.Writer, c.Request)
+    }))
+    handler.ServeHTTP(c.Writer, c.Request)
 })
 
-// 在 handler 中使用
 func handler(c *gin.Context) {
-    msg := gi18n.TC(c.Request.Context(), "hello")
+    msg := gi18n.T("hello", gi18n.WithContext(c.Request.Context()))
     c.String(200, msg)
 }
 ```
@@ -196,55 +264,55 @@ cfg := &gi18n.MiddlewareConfig{
     CookieName:  "lang",      // Cookie 名
     DefaultLang: "en",        // 默认语言
 }
-middleware := gi18n.Middleware(cfg)
+gi18n.Middleware(cfg)
 ```
 
 语言检测优先级（可配置）：
 1. URL 参数 `?lang=zh-CN`
 2. Cookie `lang=zh-CN`
-3. Accept-Language 头
+3. `Accept-Language` 头
 
 ## 内置语言包
 
-内置 6 种语言的通用词条：
+内置 6 种语言 33 个通用词条，开箱即用：
 
-- `en` - 英语
-- `zh-CN` - 简体中文
-- `zh-TW` - 繁体中文
-- `ja` - 日语
-- `ko` - 韩语
-- `ru` - 俄语
+| 语言 | 标识 |
+|------|------|
+| 英语 | `en` |
+| 简体中文 | `zh-CN` |
+| 繁体中文 | `zh-TW` |
+| 日语 | `ja` |
+| 韩语 | `ko` |
+| 俄语 | `ru` |
 
-内置词条包括：`confirm`、`cancel`、`save`、`delete`、`edit`、`submit`、`reset`、`search`、`close`、`back`、`next`、`prev`、`yes`、`no`、`success`、`failed`、`error`、`warning`、`info`、`loading`、`required`、`optional`、`invalid`、`username`、`password`、`email`、`phone`、`login`、`logout`、`register`、`welcome`、`greeting`、`items`
+词条涵盖：`confirm`、`cancel`、`save`、`delete`、`edit`、`submit`、`reset`、`search`、`close`、`back`、`next`、`prev`、`yes`、`no`、`success`、`failed`、`error`、`warning`、`info`、`loading`、`required`、`optional`、`invalid`、`username`、`password`、`email`、`phone`、`login`、`logout`、`register`、`welcome`、`greeting`（带参数）、`items`（复数）
 
 ### 禁用内置语言包
-
-编译时添加 tag：
 
 ```bash
 go build -tags=gi18n_no_builtin
 ```
 
-## 高级用法
+## 从旧版迁移
 
-### 多实例
+如果你使用的是旧版 API（`TL`, `Tf`, `TLf`, `Tp` 等），这些方法仍然可用但已标记为 `Deprecated`。建议迁移到新 API：
 
-```go
-// 创建独立实例
-bundle := gi18n.New(&gi18n.Config{
-    DefaultLang:  "zh-CN",
-    FallbackLang: "en",
-})
-bundle.Load("./locales")
-bundle.T("hello")
-```
-
-### 获取底层 go-i18n Bundle
-
-```go
-bundle := gi18n.Default().GetBundle()
-// 使用 go-i18n 原生 API
-```
+| 旧 API | 新 API |
+|--------|--------|
+| `T(id)` | `T(id)` ✅ 无需改动 |
+| `TL(lang, id)` | `T(id, WithLang(lang))` |
+| `Tf(id, "Name", "张三")` | `T(id, WithData("Name", "张三"))` |
+| `TLf(lang, id, args...)` | `T(id, WithLang(lang), WithData(args...))` |
+| `Tp(id, count)` | `T(id, WithCount(count))` |
+| `TLp(lang, id, count)` | `T(id, WithLang(lang), WithCount(count))` |
+| `TC(ctx, id)` | `T(id, WithContext(ctx))` |
+| `TCf(ctx, id, args...)` | `T(id, WithContext(ctx), WithData(args...))` |
+| `TMap(id, data)` | `T(id, WithMap(data))` |
+| `WithLang(ctx, lang)` | `ContextWithLang(ctx, lang)` |
+| `Langs()` | `Languages()` |
+| `SetLanguage(lang)` | `SetLang(lang)` |
+| `GetLanguage()` | `GetLang()` |
+| `GetLanguages()` | `Languages()` |
 
 ## License
 
