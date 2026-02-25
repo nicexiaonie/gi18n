@@ -10,7 +10,6 @@
 ## 特性
 
 - **极简 API** — 一个 `T()` + Option 组合，替代记忆十几个方法
-- **零配置** — 内置 6 种语言通用词条，开箱即用
 - **多格式** — JSON / YAML / TOML 全部支持
 - **嵌套展平** — 支持 `common.confirm` 风格的嵌套 key
 - **可观测** — MissHandler 回调 + Logger 接口，缺失翻译不再静默
@@ -34,7 +33,10 @@ import (
 )
 
 func main() {
-    // 内置语言包已自动加载，直接使用
+    // 加载语言包
+    gi18n.Load("./locales")
+
+    // 设置当前语言
     gi18n.SetLang("zh-CN")
     fmt.Println(gi18n.T("confirm"))  // 确定
     fmt.Println(gi18n.T("cancel"))   // 取消
@@ -271,27 +273,6 @@ gi18n.Middleware(cfg)
 1. URL 参数 `?lang=zh-CN`
 2. Cookie `lang=zh-CN`
 3. `Accept-Language` 头
-
-## 内置语言包
-
-内置 6 种语言 33 个通用词条，开箱即用：
-
-| 语言 | 标识 |
-|------|------|
-| 英语 | `en` |
-| 简体中文 | `zh-CN` |
-| 繁体中文 | `zh-TW` |
-| 日语 | `ja` |
-| 韩语 | `ko` |
-| 俄语 | `ru` |
-
-词条涵盖：`confirm`、`cancel`、`save`、`delete`、`edit`、`submit`、`reset`、`search`、`close`、`back`、`next`、`prev`、`yes`、`no`、`success`、`failed`、`error`、`warning`、`info`、`loading`、`required`、`optional`、`invalid`、`username`、`password`、`email`、`phone`、`login`、`logout`、`register`、`welcome`、`greeting`（带参数）、`items`（复数）
-
-### 禁用内置语言包
-
-```bash
-go build -tags=gi18n_no_builtin
-```
 
 ## 从旧版迁移
 

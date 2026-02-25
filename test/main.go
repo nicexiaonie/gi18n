@@ -3,27 +3,32 @@ package main
 import (
 	"context"
 	"fmt"
-	"path/filepath"
-	"runtime"
 
 	"github.com/nicexiaonie/gi18n"
 )
 
-// 辅助函数：打印分隔线
+// printSeparator 打印分隔线
 func printSeparator(title string) {
 	fmt.Printf("\n========== %s ==========\n", title)
 }
 
-// 辅助函数：打印测试结果
+// printResult 打印非翻译类测试结果
 func printResult(name, result string) {
-	fmt.Printf("  %-40s => %s\n", name, result)
+	fmt.Printf("  %-38s => %s\n", name, result)
 }
 
-// 获取builtin目录的绝对路径
-func getBuiltinDir() string {
-	_, filename, _, _ := runtime.Caller(0)
-	projectRoot := filepath.Dir(filepath.Dir(filename))
-	return filepath.Join(projectRoot, "builtin")
+// printTrans 以直观格式打印翻译测试结果
+// 格式: [语言] "key" {参数}  →  结果
+func printTrans(lang, key, params, result string) {
+	tag := fmt.Sprintf("[%s]", lang)
+	keyStr := fmt.Sprintf("%q", key)
+	var desc string
+	if params != "" {
+		desc = fmt.Sprintf("%-8s %-20s %s", tag, keyStr, params)
+	} else {
+		desc = fmt.Sprintf("%-8s %s", tag, keyStr)
+	}
+	fmt.Printf("  %-50s →  %s\n", desc, result)
 }
 
 func main() {
@@ -63,23 +68,35 @@ func main() {
 	// ========== 2. 加载语言文件 ==========
 	printSeparator("2. 加载语言文件")
 
-	builtinDir := getBuiltinDir()
-	fmt.Printf("  Builtin 目录: %s\n", builtinDir)
-
-	if err := gi18n.Load(builtinDir); err != nil {
-		fmt.Printf("  Load() 失败: %v\n", err)
-	} else {
-		printResult("Load() 从目录加载", "成功")
-	}
-
-	testMessages := map[string]string{
+	testMessagesEN := map[string]string{
+		"confirm":      "OK",
+		"cancel":       "Cancel",
+		"greeting":     "Hello, {{.Name}}!",
+		"items":        "{{.Count}} items",
+		"search":       "Search",
+		"login":        "Login",
 		"test.hello":   "Hello Test",
 		"test.goodbye": "Goodbye Test",
 	}
-	if err := gi18n.LoadMessages("en", testMessages); err != nil {
-		fmt.Printf("  LoadMessages() 失败: %v\n", err)
+	testMessagesZH := map[string]string{
+		"confirm":  "确定",
+		"cancel":   "取消",
+		"greeting": "你好，{{.Name}}！",
+		"items":    "{{.Count}} 个项目",
+		"search":   "搜索",
+		"login":    "登录",
+	}
+
+	if err := gi18n.LoadMessages("en", testMessagesEN); err != nil {
+		fmt.Printf("  LoadMessages(en) 失败: %v\n", err)
 	} else {
-		printResult("LoadMessages() 直接加载消息", "成功")
+		printResult("LoadMessages(en) 加载英文", "成功")
+	}
+
+	if err := gi18n.LoadMessages("zh-CN", testMessagesZH); err != nil {
+		fmt.Printf("  LoadMessages(zh-CN) 失败: %v\n", err)
+	} else {
+		printResult("LoadMessages(zh-CN) 加载中文", "成功")
 	}
 
 	jsonContent := []byte(`{
@@ -106,54 +123,47 @@ func main() {
 	printSeparator("3. 新 API: T() + Option 组合")
 
 	gi18n.SetLang("en")
+	fmt.Println("  格式: [语言] \"key\" {参数}  →  翻译结果")
+	fmt.Println()
 
 	// 简单翻译
-	printResult("T(\"confirm\") [en]",
-		gi18n.T("confirm"))
+	printTrans("en", "confirm", "", gi18n.T("confirm"))
 
 	// 指定语言
-	printResult("T(\"confirm\", WithLang(\"zh-CN\"))",
-		gi18n.T("confirm", gi18n.WithLang("zh-CN")))
+	printTrans("zh-CN", "confirm", "(WithLang)", gi18n.T("confirm", gi18n.WithLang("zh-CN")))
 
 	// 带参数
-	printResult("T(\"greeting\", WithData(\"Name\", \"Alice\"))",
-		gi18n.T("greeting", gi18n.WithData("Name", "Alice")))
+	printTrans("en", "greeting", "{Name=Alice}", gi18n.T("greeting", gi18n.WithData("Name", "Alice")))
 
 	// 指定语言 + 参数
-	printResult("T(\"greeting\", WithLang, WithData)",
-		gi18n.T("greeting", gi18n.WithLang("zh-CN"), gi18n.WithData("Name", "张三")))
+	printTrans("zh-CN", "greeting", "{Name=张三} (WithLang)", gi18n.T("greeting", gi18n.WithLang("zh-CN"), gi18n.WithData("Name", "张三")))
 
 	// 复数
-	printResult("T(\"items\", WithCount(1)) [en]",
-		gi18n.T("items", gi18n.WithCount(1)))
-	printResult("T(\"items\", WithCount(5)) [en]",
-		gi18n.T("items", gi18n.WithCount(5)))
+	printTrans("en", "items", "{count=1}", gi18n.T("items", gi18n.WithCount(1)))
+	printTrans("en", "items", "{count=5}", gi18n.T("items", gi18n.WithCount(5)))
 
 	// 指定语言 + 复数
-	printResult("T(\"items\", WithLang, WithCount)",
-		gi18n.T("items", gi18n.WithLang("zh-CN"), gi18n.WithCount(99)))
+	printTrans("zh-CN", "items", "{count=99} (WithLang)", gi18n.T("items", gi18n.WithLang("zh-CN"), gi18n.WithCount(99)))
 
 	// Map 参数
-	printResult("T(\"greeting\", WithMap(...))",
-		gi18n.T("greeting", gi18n.WithMap(map[string]interface{}{"Name": "Bob"})))
+	printTrans("en", "greeting", "{Name=Bob} (WithMap)", gi18n.T("greeting", gi18n.WithMap(map[string]interface{}{"Name": "Bob"})))
 
 	// Context
 	ctx := gi18n.ContextWithLang(context.Background(), "zh-CN")
-	printResult("T(\"confirm\", WithContext(ctx))",
-		gi18n.T("confirm", gi18n.WithContext(ctx)))
+	printTrans("zh-CN", "confirm", "(WithContext)", gi18n.T("confirm", gi18n.WithContext(ctx)))
 
 	// Context + 参数
-	printResult("T(\"greeting\", WithContext, WithData)",
-		gi18n.T("greeting", gi18n.WithContext(ctx), gi18n.WithData("Name", "李华")))
+	printTrans("zh-CN", "greeting", "{Name=李华} (WithContext)", gi18n.T("greeting", gi18n.WithContext(ctx), gi18n.WithData("Name", "李华")))
 
 	// ========== 4. MissHandler 测试 ==========
 	printSeparator("4. MissHandler 测试")
 
 	missBundle.LoadMessages("en", map[string]string{"hello": "Hello"})
-	printResult("missBundle.T(\"hello\")", missBundle.T("hello"))
-	fmt.Print("  调用不存在的 key: ")
+	printTrans("en", "hello", "(已注册)", missBundle.T("hello"))
+
+	fmt.Print("  触发 MissHandler: ")
 	result := missBundle.T("nonexistent.key")
-	printResult("missBundle.T(\"nonexistent.key\")", result)
+	printTrans("en", "nonexistent.key", "(未注册, MissReturnID)", result)
 
 	// MissReturnEmpty 策略
 	emptyBundle := gi18n.New(&gi18n.Config{
@@ -161,24 +171,22 @@ func main() {
 		MissPolicy:  gi18n.MissReturnEmpty,
 	})
 	emptyResult := emptyBundle.T("nonexistent")
-	printResult("MissReturnEmpty 策略",
-		fmt.Sprintf("'%s' (空字符串=%v)", emptyResult, emptyResult == ""))
+	printTrans("en", "nonexistent", "(MissReturnEmpty)", fmt.Sprintf("%q  空=%v", emptyResult, emptyResult == ""))
 
 	// ========== 5. 语言管理 ==========
 	printSeparator("5. 语言管理")
 
 	gi18n.SetLang("en")
-	printResult("SetLang(\"en\")", gi18n.GetLang())
+	printResult("SetLang(\"en\")  → GetLang()", gi18n.GetLang())
 
 	gi18n.SetLang("zh-CN")
-	printResult("SetLang(\"zh-CN\")", gi18n.GetLang())
+	printResult("SetLang(\"zh-CN\")  → GetLang()", gi18n.GetLang())
 
 	langs := gi18n.Languages()
 	printResult("Languages()", fmt.Sprintf("%v", langs))
 
-	// 测试下划线标准化
 	gi18n.SetLang("zh_CN")
-	printResult("SetLang(\"zh_CN\") 自动标准化", gi18n.GetLang())
+	printResult("SetLang(\"zh_CN\") 自动标准化  → GetLang()", gi18n.GetLang())
 
 	// ========== 6. 多实例隔离 ==========
 	printSeparator("6. 多实例隔离")
@@ -189,8 +197,8 @@ func main() {
 	instance1.LoadMessages("en", map[string]string{"app.name": "Application"})
 	instance2.LoadMessages("zh-CN", map[string]string{"app.name": "应用程序"})
 
-	printResult("instance1.T(\"app.name\") [en]", instance1.T("app.name"))
-	printResult("instance2.T(\"app.name\") [zh-CN]", instance2.T("app.name"))
+	printTrans("en", "app.name", "(instance1)", instance1.T("app.name"))
+	printTrans("zh-CN", "app.name", "(instance2)", instance2.T("app.name"))
 	printResult("instance1.GetLang()", instance1.GetLang())
 	printResult("instance2.GetLang()", instance2.GetLang())
 
@@ -198,37 +206,35 @@ func main() {
 	printSeparator("7. 向后兼容（已废弃方法仍可用）")
 
 	gi18n.SetLang("en")
-	printResult("[Deprecated] Translate(\"confirm\")", gi18n.Translate("confirm"))
-	printResult("[Deprecated] TL(\"zh-CN\", \"confirm\")", gi18n.TL("zh-CN", "confirm"))
-	printResult("[Deprecated] Tf(\"greeting\", ...)", gi18n.Tf("greeting", "Name", "Test"))
-	printResult("[Deprecated] TLf(\"zh-CN\", \"greeting\", ...)",
-		gi18n.TLf("zh-CN", "greeting", "Name", "测试"))
-	printResult("[Deprecated] Tp(\"items\", 5)", gi18n.Tp("items", 5))
-	printResult("[Deprecated] TLp(\"zh-CN\", \"items\", 10)",
-		gi18n.TLp("zh-CN", "items", 10))
+	fmt.Println("  格式: [语言] \"key\" {参数}  →  翻译结果")
+	fmt.Println()
 
-	// 实例方法向后兼容
-	printResult("[Deprecated] bundle.Translate(\"search\")", bundle.Translate("search"))
-	printResult("[Deprecated] bundle.TL(\"zh-CN\", \"search\")", bundle.TL("zh-CN", "search"))
+	printTrans("en", "confirm", "[Deprecated] Translate()", gi18n.Translate("confirm"))
+	printTrans("zh-CN", "confirm", "[Deprecated] TL(lang, key)", gi18n.TL("zh-CN", "confirm"))
+	printTrans("en", "greeting", "{Name=Test} [Deprecated] Tf()", gi18n.Tf("greeting", "Name", "Test"))
+	printTrans("zh-CN", "greeting", "{Name=测试} [Deprecated] TLf()", gi18n.TLf("zh-CN", "greeting", "Name", "测试"))
+	printTrans("en", "items", "{count=5} [Deprecated] Tp()", gi18n.Tp("items", 5))
+	printTrans("zh-CN", "items", "{count=10} [Deprecated] TLp()", gi18n.TLp("zh-CN", "items", 10))
 
-	// Context 方法向后兼容
+	printTrans("en", "search", "(bundle) [Deprecated] Translate()", bundle.Translate("search"))
+	printTrans("zh-CN", "search", "(bundle) [Deprecated] TL()", bundle.TL("zh-CN", "search"))
+
 	ctxEN := gi18n.ContextWithLang(context.Background(), "en")
 	ctxZH := gi18n.ContextWithLang(context.Background(), "zh-CN")
 
-	printResult("[Deprecated] TC(ctxEN, \"login\")", gi18n.TC(ctxEN, "login"))
-	printResult("[Deprecated] TC(ctxZH, \"login\")", gi18n.TC(ctxZH, "login"))
-	printResult("[Deprecated] TCf(ctxEN, \"greeting\", ...)",
-		gi18n.TCf(ctxEN, "greeting", "Name", "Frank"))
-	printResult("[Deprecated] TCp(ctxEN, \"items\", 7)",
-		gi18n.TCp(ctxEN, "items", 7))
+	printTrans("en", "login", "(ctxEN) [Deprecated] TC()", gi18n.TC(ctxEN, "login"))
+	printTrans("zh-CN", "login", "(ctxZH) [Deprecated] TC()", gi18n.TC(ctxZH, "login"))
+	printTrans("en", "greeting", "{Name=Frank} (ctxEN) [Deprecated] TCf()", gi18n.TCf(ctxEN, "greeting", "Name", "Frank"))
+	printTrans("en", "items", "{count=7} (ctxEN) [Deprecated] TCp()", gi18n.TCp(ctxEN, "items", 7))
 
 	// ========== 8. 边界情况 ==========
 	printSeparator("8. 边界情况")
 
-	printResult("T(\"not.exist\") 不存在的 key", gi18n.T("not.exist"))
-	printResult("T() 空参数 WithData", gi18n.T("greeting", gi18n.WithData()))
-	printResult("T() WithCount(0)", gi18n.T("items", gi18n.WithCount(0)))
-	printResult("T() WithCount(-1)", gi18n.T("items", gi18n.WithCount(-1)))
+	gi18n.SetLang("zh-CN") // 当前语言是 zh-CN，but zh-CN 没有 not.exist，会 fallback 到 en
+	printTrans("zh-CN", "not.exist", "(key 不存在)", gi18n.T("not.exist"))
+	printTrans("en", "greeting", "(WithData 无参数)", gi18n.T("greeting", gi18n.WithData()))
+	printTrans("en", "items", "{count=0}", gi18n.T("items", gi18n.WithCount(0)))
+	printTrans("en", "items", "{count=-1}", gi18n.T("items", gi18n.WithCount(-1)))
 
 	// ========== 9. 新 API 总结 ==========
 	printSeparator("9. 新 API 总结")
